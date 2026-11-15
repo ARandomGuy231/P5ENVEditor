@@ -26,22 +26,21 @@ namespace P5ENVEditor
 
         public static void WriteToLog(string message, LogLevel logLevel)
         {
+            if (logLevel == LogLevel.Debug)
+            {
+                Debug.WriteLine($"[{logLevel.ToString()}] {message}");
+                return;
+            }
+
             try
             {
                 using (StreamWriter writer = new StreamWriter(logFilePath, true))
                 {
                     DateTime date = DateTime.Now;
-
-                    if (logLevel == LogLevel.Debug && Debugger.IsAttached)
-                    {
-                        Debug.WriteLine($"[{logLevel.ToString()}] {message}");
-                    }
-                    else
-                    {
-                        writer.WriteLine($"[{date.ToString("d/M/yyyy h:mm:ss tt")}] [{logLevel.ToString()}] {message}");
-                        Debug.WriteLine($"[{logLevel.ToString()}] {message}");
-                    }
+                    writer.WriteLine($"[{date.ToString("d/M/yyyy h:mm:ss tt")}] [{logLevel.ToString()}] {message}");
                 }
+
+                Debug.WriteLine($"[{logLevel.ToString()}] {message}");
             }
             catch (Exception ex)
             {

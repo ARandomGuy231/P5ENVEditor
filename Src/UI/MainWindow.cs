@@ -35,13 +35,14 @@ namespace P5ENVEditor
 
             try //update UI info
             {
-                if (EnvFunctions.loadedENVHeader.gfsVersion != 17846384 && EnvFunctions.loadedENVHeader.gfsVersion != 17846368)
+                if (EnvFunctions.loadedENVHeader.gfsVersion is not 0x1105050 and not 0x1105060 and not 0x1105070)
                 {
-                    string message = "You have loaded an uncommon ENV version, some parameters may appear disabled, empty or incorrect.";
+                    string message = "You have loaded a partially supported ENV version, some parameters may appear disabled, empty or incorrect. " +
+                        "See the table on the GitHub page for more information.";
 
                     Logger.WriteToLog(message, LogLevel.Warn);
-                    MessageBox.Show($"{message}\n\nIf you notice anything incorrect, please report it on GitHub with the ENV file you're trying to edit.", 
-                        "Uncommon ENV version detected.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show($"{message}\n\nIf you notice anything incorrect, please report it on GitHub with the ENV file you're trying to edit.",
+                        "Partially supported ENV version detected.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 DisplayAllENVParams();
