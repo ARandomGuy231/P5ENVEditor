@@ -1,7 +1,9 @@
 # P5 ENV Editor
 A GUI tool for viewing, editing and saving ENV files from Persona 5. Currently only vanilla Persona 5 ENV files are supported, Royal support will come later.
 
-This program requires you have [.NET Desktop Runtime 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0/runtime) installed to use. Only Windows is officially supported however it should work fine on Linux using Wine.
+This program requires you have [.NET Desktop Runtime 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0/runtime) installed to use. Only Windows is officially supported however it should work fine on Linux using Wine. 
+
+<img width="426" height="512" alt="A screenshot of the Fog tab in P5 ENV Editor" src="https://github.com/user-attachments/assets/3af5647c-f52a-44e6-bbd7-1729e713591f" />
 
 ## How to Use
 - Download the latest [release](https://github.com/ARandomGuy231/P5ENVEditor/releases) and extract the zip on your PC.
