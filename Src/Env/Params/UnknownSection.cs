@@ -81,7 +81,7 @@ namespace P5ENVEditor.Env.Params
             writer.WriteByte(field1F1);
             writer.WriteSingle(field1F2);
 
-            if (EnvFunctions.envVersionCheck != 0x1104910)
+            if (EnvFunctions.loadedENVHeader.gfsVersion != 0x1104910)
             {
                 writer.WriteSingle(diffFilterStrength);
             }
