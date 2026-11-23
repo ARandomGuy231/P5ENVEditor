@@ -9,6 +9,17 @@ namespace P5ENVEditor
         {
             //diffusion settings shown in lighting tab
             enableDiffusionFilterBox.CheckState = (CheckState)EnvFunctions.loadedENVParams.unknownSection.field1F1;
+
+            if (EnvFunctions.loadedENVHeader.gfsVersion >= 0x1105100)
+            {
+                miscUnkValueField251.Enabled = true;
+                SetNumberBox(miscUnkValueField251, EnvFunctions.loadedENVParams.unknownSection.field251);
+            }
+            else
+            {
+                DisableNumberBox(miscUnkValueField251);
+            }
+
             SetNumberBox(diffusionFilterBrightnessValue, (decimal)EnvFunctions.loadedENVParams.unknownSection.field1F2);
 
             if (EnvFunctions.loadedENVHeader.gfsVersion != 0x1104910)
@@ -84,6 +95,7 @@ namespace P5ENVEditor
 
             //Diffusion filter settings are shown in the lighting tab
             newUnknownSection.field1F1 = (byte)enableDiffusionFilterBox.CheckState;
+            newUnknownSection.field251 = CheckNumberBox(miscUnkValueField251, newUnknownSection.field251);
             newUnknownSection.field1F2 = CheckNumberBox(diffusionFilterBrightnessValue, newUnknownSection.field1F2);
             newUnknownSection.diffFilterStrength = CheckNumberBox(diffusionFilterStrengthValue, newUnknownSection.diffFilterStrength);
             newUnknownSection.field1FA = CheckNumberBox(diffusionFilterBrightness2Value, newUnknownSection.field1FA);

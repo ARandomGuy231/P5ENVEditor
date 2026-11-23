@@ -16,6 +16,12 @@ namespace P5ENVEditor.Env.Params
         public byte field2AE;
         public byte field2AF;
 
+        //Royal Only
+        public float shadowColorRed;
+        public float shadowColorGreen;
+        public float shadowColorBlue;
+        public float shadowColorAlpha;
+
         public FieldShadowSection(BinaryObjectReader reader)
         {
             fieldShadowFarClip = reader.ReadSingle();
@@ -29,6 +35,14 @@ namespace P5ENVEditor.Env.Params
             field2AD = reader.ReadByte();
             field2AE = reader.ReadByte();
             field2AF = reader.ReadByte();
+
+            if (EnvFunctions.envVersionCheck >= 0x1105100)
+            {
+                shadowColorRed = reader.ReadSingle();
+                shadowColorGreen = reader.ReadSingle();
+                shadowColorBlue = reader.ReadSingle();
+                shadowColorAlpha = reader.ReadSingle();
+            }
         }
 
         public void Write(BinaryObjectWriter writer)
@@ -44,6 +58,15 @@ namespace P5ENVEditor.Env.Params
             writer.WriteByte(field2AD);
             writer.WriteByte(field2AE);
             writer.WriteByte(field2AF);
+
+            if (EnvFunctions.loadedENVHeader.gfsVersion >= 0x1105100)
+            {
+                writer.WriteSingle(shadowColorRed);
+                writer.WriteSingle(shadowColorGreen);
+                writer.WriteSingle(shadowColorBlue);
+                writer.WriteSingle(shadowColorAlpha);
+
+            }
         }
     }
 }

@@ -5,6 +5,7 @@ namespace P5ENVEditor.Env.Params
     public struct UnknownSection
     {
         public byte field1F1; //diffusion filter toggle? (not present in the beta settings).
+        public uint field251; //Royal only
         public float field1F2; //diffusion filter medium brightness, two decimal places. 0-100
         public float diffFilterStrength; //float version of field1F6 (similar to bloom scale in the lighting section), two decimal places. 0-1
         public byte field1F6;
@@ -34,6 +35,12 @@ namespace P5ENVEditor.Env.Params
         public UnknownSection(BinaryObjectReader reader)
         {
             field1F1 = reader.ReadByte();
+
+            if (EnvFunctions.envVersionCheck >= 0x1105100)
+            {
+                field251 = reader.ReadUInt32();
+            }
+
             field1F2 = reader.ReadSingle();
 
             if (EnvFunctions.envVersionCheck != 0x1104910)
@@ -79,6 +86,12 @@ namespace P5ENVEditor.Env.Params
         public void Write(BinaryObjectWriter writer)
         {
             writer.WriteByte(field1F1);
+
+            if (EnvFunctions.loadedENVHeader.gfsVersion >= 0x1105100)
+            {
+                writer.WriteUInt32(field251);
+            }
+
             writer.WriteSingle(field1F2);
 
             if (EnvFunctions.loadedENVHeader.gfsVersion != 0x1104910)

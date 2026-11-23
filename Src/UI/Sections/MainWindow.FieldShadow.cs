@@ -19,6 +19,23 @@ namespace P5ENVEditor
             shadowUnkBoxField2AD.CheckState = (CheckState)EnvFunctions.loadedENVParams.fieldShadowSection.field2AD;
             shadowUnkBoxField2AE.CheckState = (CheckState)EnvFunctions.loadedENVParams.fieldShadowSection.field2AE;
             shadowUnkBoxField2AF.CheckState = (CheckState)EnvFunctions.loadedENVParams.fieldShadowSection.field2AF;
+
+            if (EnvFunctions.loadedENVHeader.gfsVersion >= 0x1105100)
+            {
+                shadowColorTable.Enabled = true;
+                shadowColorValueR.Value = FloatToRGB(EnvFunctions.loadedENVParams.fieldShadowSection.shadowColorRed);
+                shadowColorValueG.Value = FloatToRGB(EnvFunctions.loadedENVParams.fieldShadowSection.shadowColorGreen);
+                shadowColorValueB.Value = FloatToRGB(EnvFunctions.loadedENVParams.fieldShadowSection.shadowColorBlue);
+                shadowColorValueA.Value = FloatToRGB(EnvFunctions.loadedENVParams.fieldShadowSection.shadowColorAlpha);
+            }
+            else
+            {
+                shadowColorTable.Enabled = false;
+                shadowColorValueR.Value = shadowColorValueR.Minimum;
+                shadowColorValueG.Value = shadowColorValueG.Minimum;
+                shadowColorValueB.Value = shadowColorValueB.Minimum;
+                shadowColorValueA.Value = shadowColorValueA.Maximum;
+            }
         }
 
         private FieldShadowSection CreateFieldShadowSection()
@@ -38,7 +55,60 @@ namespace P5ENVEditor
             newFieldShadowSection.field2AE = (byte)shadowUnkBoxField2AE.CheckState;
             newFieldShadowSection.field2AF = (byte)shadowUnkBoxField2AF.CheckState;
 
+            newFieldShadowSection.shadowColorRed = (float)shadowColorValueR.Value / 255f;
+            newFieldShadowSection.shadowColorGreen = (float)shadowColorValueG.Value / 255f;
+            newFieldShadowSection.shadowColorBlue = (float)shadowColorValueB.Value / 255f;
+            newFieldShadowSection.shadowColorAlpha = (float)shadowColorValueA.Value / 255f;
+
             return newFieldShadowSection;
+        }
+
+        private void UpdateShadowColorSwatch()
+        {
+            shadowColorSwatch.BackColor = Color.FromArgb((int)shadowColorValueR.Value, (int)shadowColorValueG.Value, (int)shadowColorValueB.Value);
+        }
+
+        private void shadowColorSliderR_Scroll(object sender, EventArgs e)
+        {
+            shadowColorValueR.Value = shadowColorSliderR.Value;
+        }
+
+        private void shadowColorValueR_ValueChanged(object sender, EventArgs e)
+        {
+            shadowColorSliderR.Value = (int)shadowColorValueR.Value;
+            UpdateShadowColorSwatch();
+        }
+
+        private void shadowColorSliderG_Scroll(object sender, EventArgs e)
+        {
+            shadowColorValueG.Value = shadowColorSliderG.Value;
+        }
+
+        private void shadowColorValueG_ValueChanged(object sender, EventArgs e)
+        {
+            shadowColorSliderG.Value = (int)shadowColorValueG.Value;
+            UpdateShadowColorSwatch();
+        }
+
+        private void shadowColorSliderB_Scroll(object sender, EventArgs e)
+        {
+            shadowColorValueB.Value = shadowColorSliderB.Value;
+        }
+
+        private void shadowColorValueB_ValueChanged(object sender, EventArgs e)
+        {
+            shadowColorSliderB.Value = (int)shadowColorValueB.Value;
+            UpdateShadowColorSwatch();
+        }
+
+        private void shadowColorSliderA_Scroll(object sender, EventArgs e)
+        {
+            shadowColorValueA.Value = shadowColorSliderA.Value;
+        }
+
+        private void shadowColorValueA_ValueChanged(object sender, EventArgs e)
+        {
+            shadowColorSliderA.Value = (int)shadowColorValueA.Value;
         }
     }
 }

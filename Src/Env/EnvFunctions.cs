@@ -5,11 +5,17 @@ namespace P5ENVEditor.Env
 {
     internal static class EnvFunctions
     {
-        private static readonly List<uint> supportedEnvVersions = new List<uint>
+        public static readonly List<uint> supportedEnvVersions = new List<uint>
         {
+            0x1105100, //17846528 (royal, most common, 1454 files use it, 808 bytes)
             0x1105070, //17846384 (most common, 413 files use it, 693 bytes)
             0x1105060, //17846368 (also common, 195 files use it, 693 bytes)
-            0x1105050, //17846352 (env0020_013_010, only file that uses it, 693 bytes)
+            0x1105050  //17846352 (env0020_013_010, only file that uses it, 693 bytes)
+            
+        };
+
+        public static readonly List<uint> partiallySupportedEnvVersions = new List<uint>
+        {
             0x1105040, //17846336 (env0001_101_010 uses it, 55 files use it, 680 bytes)
             0x1105030, //17846320 (env0000_100_000 uses it, 52 files use it, 680 bytes)
             0x1105020, //17846304 (env0157_002_000 uses it, 26 files use it, 672 bytes)
@@ -22,7 +28,7 @@ namespace P5ENVEditor.Env
             0x1104940, //17844544 (env0001_101_000 uses it, 2 files use it, 664 bytes)
             0x1104920, //17844512 (env0001_110_000 uses it, 2 files use it, 664 bytes)
             0x1104910, //17844496 (env0222_003_000, only file that uses it, 664 bytes)
-            0x1104900  //17844480 (env0222_001_000, 3 files use it, 664 bytes)
+            0x1104900  //17844480 (env0222_001_000 uses it, 3 files use it, 664 bytes)
         };
 
         public static uint envVersionCheck;
@@ -46,7 +52,7 @@ namespace P5ENVEditor.Env
                         Logger.WriteToLog($"ENV version: 0x{envHeader.gfsVersion:X}", LogLevel.Info);
                         envVersionCheck = envHeader.gfsVersion;
 
-                        if (supportedEnvVersions.Contains(envVersionCheck))
+                        if (supportedEnvVersions.Contains(envVersionCheck) || partiallySupportedEnvVersions.Contains(envVersionCheck))
                         {
                             var envParams = new EnvParams(reader);
                             long envFileLength = new FileInfo(envFilePath).Length;
@@ -65,13 +71,13 @@ namespace P5ENVEditor.Env
                         else
                         {
                             throw new NotSupportedException($"Invalid or unsupported ENV version detected (0x{envHeader.gfsVersion:X}). " +
-                                $"Currently, only vanilla Persona 5 ENV files are supported.");
+                                $"Only Persona 5 ENV files are supported.");
                         }
                     }
                     else
                     {
                         throw new InvalidDataException($"{Path.GetFileName(envFilePath)} is not a valid ENV file. " +
-                            "Currently, only vanilla Persona 5 ENV files are supported.");
+                            "Only Persona 5 ENV files are supported.");
                     }
                 }
                 else

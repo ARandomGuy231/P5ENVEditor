@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             topMenuStrip = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             openFileToolStripMenuItem = new ToolStripMenuItem();
@@ -256,6 +257,72 @@
             fogColorSliderB = new TrackBar();
             fogColorSliderO = new TrackBar();
             lightingPage = new TabPage();
+            royalLightingSettingsGroupBox = new GroupBox();
+            royalLightingSettingsTable = new TableLayoutPanel();
+            lightingUnkLabelField23C = new Label();
+            lightingUnkLabelField1FC = new Label();
+            lightingUnkLabelField238 = new Label();
+            lightingUnkLabelField1F8 = new Label();
+            lightingUnkLabelField234 = new Label();
+            lightingUnkLabelField1F4 = new Label();
+            lightingUnkLabelField230 = new Label();
+            lightingUnkLabelField1F0 = new Label();
+            lightingUnkLabelField22C = new Label();
+            sceneDarkLevelLabel = new Label();
+            lightingUnkLabelField228 = new Label();
+            sceneWhiteLevelLabel = new Label();
+            lightingUnkLabelField224 = new Label();
+            glareSensitivityLabel = new Label();
+            bloomDarkLevelLabel = new Label();
+            bloomWhiteLevelLabel = new Label();
+            redColorBoostLabel = new Label();
+            bloomDetailLabel = new Label();
+            lightingUnkLabelField214 = new Label();
+            lightingUnkLabelField210 = new Label();
+            lightingUnkLabelField20C = new Label();
+            lightingUnkLabelField208 = new Label();
+            lightingUnkBoxField1CC = new CheckBox();
+            lightingUnkLabelField1CD = new Label();
+            lightingUnkLabelField1CC = new Label();
+            lightingUnkLabelField200 = new Label();
+            lightingUnkLabelField204 = new Label();
+            lightingUnkLabelField1CE = new Label();
+            lightingUnkLabelField1CF = new Label();
+            lightingUnkLabelField1D0 = new Label();
+            bloomAmountLabel = new Label();
+            lightingUnkValueField1D0 = new NumericUpDown();
+            bloomAmountValue = new NumericUpDown();
+            bloomDetailValue = new NumericUpDown();
+            bloomWhiteLevelValue = new NumericUpDown();
+            bloomDarkLevelValue = new NumericUpDown();
+            glareSensitivityValue = new NumericUpDown();
+            sceneWhiteLevelValue = new NumericUpDown();
+            sceneDarkLevelValue = new NumericUpDown();
+            lightingUnkValueField1F0 = new NumericUpDown();
+            lightingUnkValueField1F4 = new NumericUpDown();
+            lightingUnkValueField1F8 = new NumericUpDown();
+            lightingUnkValueField1FC = new NumericUpDown();
+            lightingUnkBoxField1CD = new CheckBox();
+            lightingUnkBoxField1CE = new CheckBox();
+            lightingUnkBoxField1CF = new CheckBox();
+            lightingUnkValueField200 = new NumericUpDown();
+            lightingUnkValueField204 = new NumericUpDown();
+            lightingUnkValueField208 = new NumericUpDown();
+            lightingUnkValueField20C = new NumericUpDown();
+            lightingUnkValueField210 = new NumericUpDown();
+            lightingUnkValueField214 = new NumericUpDown();
+            redColorBoostValue = new NumericUpDown();
+            lightingUnkValueField224 = new NumericUpDown();
+            lightingUnkValueField228 = new NumericUpDown();
+            lightingUnkValueField22C = new NumericUpDown();
+            lightingUnkValueField230 = new NumericUpDown();
+            lightingUnkValueField234 = new NumericUpDown();
+            lightingUnkValueField238 = new NumericUpDown();
+            lightingUnkValueField23C = new NumericUpDown();
+            greenColorBoostValue = new NumericUpDown();
+            blueColorBoostValue = new NumericUpDown();
+            greenColorBoostLabel = new Label();
+            blueColorBoostLabel = new Label();
             bloomSettingsGroupBox = new GroupBox();
             bloomSettingsTable = new TableLayoutPanel();
             bloomThresholdLabel = new Label();
@@ -315,6 +382,21 @@
             enableToneMapLabel = new Label();
             enableGraphicOutputLabel = new Label();
             fieldShadowTab = new TabPage();
+            shadowColorGroupBox = new GroupBox();
+            shadowColorSwatch = new Panel();
+            shadowColorTable = new TableLayoutPanel();
+            shadowColorValueB = new NumericUpDown();
+            shadowColorSliderR = new TrackBar();
+            shadowColorValueG = new NumericUpDown();
+            shadowColorLabelB = new Label();
+            shadowColorLabelG = new Label();
+            shadowColorLabelR = new Label();
+            shadowColorValueR = new NumericUpDown();
+            shadowColorLabelA = new Label();
+            shadowColorValueA = new NumericUpDown();
+            shadowColorSliderG = new TrackBar();
+            shadowColorSliderB = new TrackBar();
+            shadowColorSliderA = new TrackBar();
             shadowUnkSettingsGroupBox = new GroupBox();
             shadowUnkSettingsTable = new TableLayoutPanel();
             shadowUnkBoxField2AF = new CheckBox();
@@ -372,7 +454,7 @@
             dofNearBlurPlaneValue = new NumericUpDown();
             dofFarBlurPlaneValue = new NumericUpDown();
             dofFarBlurLimitValue = new NumericUpDown();
-            skyPhysicsPage = new TabPage();
+            miscPage = new TabPage();
             physicsSettingsGroupBox = new GroupBox();
             physicsSettingsTable = new TableLayoutPanel();
             windCycleDelayValue = new NumericUpDown();
@@ -410,9 +492,12 @@
             skyColorSliderG = new TrackBar();
             skyColorSliderB = new TrackBar();
             skyColorSliderA = new TrackBar();
-            miscPage = new TabPage();
             miscExtraGroupBox = new GroupBox();
             miscExtraTable = new TableLayoutPanel();
+            miscUnkValueField251 = new NumericUpDown();
+            miscUnkLabelField251 = new Label();
+            miscUnkValueField1F8 = new NumericUpDown();
+            miscUnkValueField1F7 = new NumericUpDown();
             miscUnkValueField284 = new NumericUpDown();
             miscUnkLabelField284 = new Label();
             miscUnkLabelField27A = new Label();
@@ -424,6 +509,7 @@
             miscUnkLabelField1F7 = new Label();
             miscUnkLabelField1F6 = new Label();
             miscUnkValueField1F6 = new NumericUpDown();
+            miscUnkValueField1F9 = new NumericUpDown();
             characterOutlineGroupBox = new GroupBox();
             characterOutlineTable = new TableLayoutPanel();
             enableCharacterOutlinesLabel = new Label();
@@ -457,9 +543,6 @@
             envVerLabel = new ToolStripStatusLabel();
             appVerLabel = new ToolStripStatusLabel();
             saveFileDialog = new SaveFileDialog();
-            miscUnkValueField1F7 = new NumericUpDown();
-            miscUnkValueField1F8 = new NumericUpDown();
-            miscUnkValueField1F9 = new NumericUpDown();
             topMenuStrip.SuspendLayout();
             envSectionTabs.SuspendLayout();
             fieldModelPage.SuspendLayout();
@@ -601,6 +684,36 @@
             ((System.ComponentModel.ISupportInitialize)fogColorSliderB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fogColorSliderO).BeginInit();
             lightingPage.SuspendLayout();
+            royalLightingSettingsGroupBox.SuspendLayout();
+            royalLightingSettingsTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField1D0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bloomAmountValue).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bloomDetailValue).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bloomWhiteLevelValue).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bloomDarkLevelValue).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)glareSensitivityValue).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)sceneWhiteLevelValue).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)sceneDarkLevelValue).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField1F0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField1F4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField1F8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField1FC).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField200).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField204).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField208).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField20C).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField210).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField214).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)redColorBoostValue).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField224).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField228).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField22C).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField230).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField234).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField238).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField23C).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)greenColorBoostValue).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)blueColorBoostValue).BeginInit();
             bloomSettingsGroupBox.SuspendLayout();
             bloomSettingsTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bloomThresholdValue).BeginInit();
@@ -631,6 +744,16 @@
             lightingSettingsGroupBox.SuspendLayout();
             lightingSettingsTable.SuspendLayout();
             fieldShadowTab.SuspendLayout();
+            shadowColorGroupBox.SuspendLayout();
+            shadowColorTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)shadowColorValueB).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorSliderR).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorValueG).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorValueR).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorValueA).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorSliderG).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorSliderB).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorSliderA).BeginInit();
             shadowUnkSettingsGroupBox.SuspendLayout();
             shadowUnkSettingsTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)shadowUnkValueField2A0).BeginInit();
@@ -657,7 +780,7 @@
             ((System.ComponentModel.ISupportInitialize)dofNearBlurPlaneValue).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dofFarBlurPlaneValue).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dofFarBlurLimitValue).BeginInit();
-            skyPhysicsPage.SuspendLayout();
+            miscPage.SuspendLayout();
             physicsSettingsGroupBox.SuspendLayout();
             physicsSettingsTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)windCycleDelayValue).BeginInit();
@@ -678,13 +801,16 @@
             ((System.ComponentModel.ISupportInitialize)skyColorSliderG).BeginInit();
             ((System.ComponentModel.ISupportInitialize)skyColorSliderB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)skyColorSliderA).BeginInit();
-            miscPage.SuspendLayout();
             miscExtraGroupBox.SuspendLayout();
             miscExtraTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)miscUnkValueField251).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)miscUnkValueField284).BeginInit();
             ((System.ComponentModel.ISupportInitialize)refHeightValue).BeginInit();
             ((System.ComponentModel.ISupportInitialize)miscUnkValueField27A).BeginInit();
             ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F9).BeginInit();
             characterOutlineGroupBox.SuspendLayout();
             characterOutlineTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)characterOutlineRangeValue).BeginInit();
@@ -703,9 +829,6 @@
             ((System.ComponentModel.ISupportInitialize)lightMapColorSliderB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)lightMapColorSliderA).BeginInit();
             statusStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F9).BeginInit();
             SuspendLayout();
             // 
             // topMenuStrip
@@ -771,13 +894,12 @@
             envSectionTabs.Controls.Add(lightingPage);
             envSectionTabs.Controls.Add(fieldShadowTab);
             envSectionTabs.Controls.Add(dofSSAOPage);
-            envSectionTabs.Controls.Add(skyPhysicsPage);
             envSectionTabs.Controls.Add(miscPage);
             envSectionTabs.Dock = DockStyle.Fill;
             envSectionTabs.Location = new Point(0, 24);
             envSectionTabs.Name = "envSectionTabs";
             envSectionTabs.SelectedIndex = 0;
-            envSectionTabs.Size = new Size(644, 695);
+            envSectionTabs.Size = new Size(644, 700);
             envSectionTabs.TabIndex = 4;
             // 
             // fieldModelPage
@@ -792,7 +914,7 @@
             fieldModelPage.Location = new Point(4, 24);
             fieldModelPage.Name = "fieldModelPage";
             fieldModelPage.Padding = new Padding(10);
-            fieldModelPage.Size = new Size(636, 667);
+            fieldModelPage.Size = new Size(636, 672);
             fieldModelPage.TabIndex = 0;
             fieldModelPage.Text = "Field Model";
             fieldModelPage.UseVisualStyleBackColor = true;
@@ -1874,7 +1996,7 @@
             charModelPage.Location = new Point(4, 24);
             charModelPage.Name = "charModelPage";
             charModelPage.Padding = new Padding(10);
-            charModelPage.Size = new Size(636, 667);
+            charModelPage.Size = new Size(636, 672);
             charModelPage.TabIndex = 1;
             charModelPage.Text = "Character Model";
             charModelPage.UseVisualStyleBackColor = true;
@@ -3063,7 +3185,7 @@
             fogPage.Location = new Point(4, 24);
             fogPage.Name = "fogPage";
             fogPage.Padding = new Padding(3);
-            fogPage.Size = new Size(636, 667);
+            fogPage.Size = new Size(636, 672);
             fogPage.TabIndex = 2;
             fogPage.Text = "Fog";
             fogPage.UseVisualStyleBackColor = true;
@@ -3764,6 +3886,7 @@
             // lightingPage
             // 
             lightingPage.AutoScroll = true;
+            lightingPage.Controls.Add(royalLightingSettingsGroupBox);
             lightingPage.Controls.Add(bloomSettingsGroupBox);
             lightingPage.Controls.Add(colorCorrectionGroupBox);
             lightingPage.Controls.Add(diffusionFilterGroupBox);
@@ -3772,10 +3895,843 @@
             lightingPage.Location = new Point(4, 24);
             lightingPage.Name = "lightingPage";
             lightingPage.Padding = new Padding(3);
-            lightingPage.Size = new Size(636, 667);
+            lightingPage.Size = new Size(636, 672);
             lightingPage.TabIndex = 3;
             lightingPage.Text = "Lighting";
             lightingPage.UseVisualStyleBackColor = true;
+            // 
+            // royalLightingSettingsGroupBox
+            // 
+            royalLightingSettingsGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            royalLightingSettingsGroupBox.Controls.Add(royalLightingSettingsTable);
+            royalLightingSettingsGroupBox.FlatStyle = FlatStyle.Flat;
+            royalLightingSettingsGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            royalLightingSettingsGroupBox.Location = new Point(10, 571);
+            royalLightingSettingsGroupBox.Name = "royalLightingSettingsGroupBox";
+            royalLightingSettingsGroupBox.Padding = new Padding(6, 0, 6, 0);
+            royalLightingSettingsGroupBox.Size = new Size(599, 513);
+            royalLightingSettingsGroupBox.TabIndex = 8;
+            royalLightingSettingsGroupBox.TabStop = false;
+            royalLightingSettingsGroupBox.Text = "Royal Lighting Settings";
+            // 
+            // royalLightingSettingsTable
+            // 
+            royalLightingSettingsTable.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            royalLightingSettingsTable.ColumnCount = 5;
+            royalLightingSettingsTable.ColumnStyles.Add(new ColumnStyle());
+            royalLightingSettingsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 83F));
+            royalLightingSettingsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40F));
+            royalLightingSettingsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 150F));
+            royalLightingSettingsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 74F));
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField23C, 3, 15);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField1FC, 0, 15);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField238, 3, 14);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField1F8, 0, 14);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField234, 3, 13);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField1F4, 0, 13);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField230, 3, 12);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField1F0, 0, 12);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField22C, 3, 11);
+            royalLightingSettingsTable.Controls.Add(sceneDarkLevelLabel, 0, 11);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField228, 3, 10);
+            royalLightingSettingsTable.Controls.Add(sceneWhiteLevelLabel, 0, 10);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField224, 3, 9);
+            royalLightingSettingsTable.Controls.Add(glareSensitivityLabel, 0, 9);
+            royalLightingSettingsTable.Controls.Add(bloomDarkLevelLabel, 0, 8);
+            royalLightingSettingsTable.Controls.Add(bloomWhiteLevelLabel, 0, 7);
+            royalLightingSettingsTable.Controls.Add(redColorBoostLabel, 3, 6);
+            royalLightingSettingsTable.Controls.Add(bloomDetailLabel, 0, 6);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField214, 3, 5);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField210, 3, 4);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField20C, 3, 3);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField208, 3, 2);
+            royalLightingSettingsTable.Controls.Add(lightingUnkBoxField1CC, 1, 0);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField1CD, 0, 1);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField1CC, 0, 0);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField200, 3, 0);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField204, 3, 1);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField1CE, 0, 2);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField1CF, 0, 3);
+            royalLightingSettingsTable.Controls.Add(lightingUnkLabelField1D0, 0, 4);
+            royalLightingSettingsTable.Controls.Add(bloomAmountLabel, 0, 5);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField1D0, 1, 4);
+            royalLightingSettingsTable.Controls.Add(bloomAmountValue, 1, 5);
+            royalLightingSettingsTable.Controls.Add(bloomDetailValue, 1, 6);
+            royalLightingSettingsTable.Controls.Add(bloomWhiteLevelValue, 1, 7);
+            royalLightingSettingsTable.Controls.Add(bloomDarkLevelValue, 1, 8);
+            royalLightingSettingsTable.Controls.Add(glareSensitivityValue, 1, 9);
+            royalLightingSettingsTable.Controls.Add(sceneWhiteLevelValue, 1, 10);
+            royalLightingSettingsTable.Controls.Add(sceneDarkLevelValue, 1, 11);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField1F0, 1, 12);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField1F4, 1, 13);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField1F8, 1, 14);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField1FC, 1, 15);
+            royalLightingSettingsTable.Controls.Add(lightingUnkBoxField1CD, 1, 1);
+            royalLightingSettingsTable.Controls.Add(lightingUnkBoxField1CE, 1, 2);
+            royalLightingSettingsTable.Controls.Add(lightingUnkBoxField1CF, 1, 3);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField200, 4, 0);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField204, 4, 1);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField208, 4, 2);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField20C, 4, 3);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField210, 4, 4);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField214, 4, 5);
+            royalLightingSettingsTable.Controls.Add(redColorBoostValue, 4, 6);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField224, 4, 9);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField228, 4, 10);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField22C, 4, 11);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField230, 4, 12);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField234, 4, 13);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField238, 4, 14);
+            royalLightingSettingsTable.Controls.Add(lightingUnkValueField23C, 4, 15);
+            royalLightingSettingsTable.Controls.Add(greenColorBoostValue, 4, 7);
+            royalLightingSettingsTable.Controls.Add(blueColorBoostValue, 4, 8);
+            royalLightingSettingsTable.Controls.Add(greenColorBoostLabel, 3, 7);
+            royalLightingSettingsTable.Controls.Add(blueColorBoostLabel, 3, 8);
+            royalLightingSettingsTable.Location = new Point(62, 19);
+            royalLightingSettingsTable.Name = "royalLightingSettingsTable";
+            royalLightingSettingsTable.RowCount = 16;
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            royalLightingSettingsTable.Size = new Size(479, 479);
+            royalLightingSettingsTable.TabIndex = 4;
+            // 
+            // lightingUnkLabelField23C
+            // 
+            lightingUnkLabelField23C.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField23C.AutoSize = true;
+            lightingUnkLabelField23C.Location = new Point(335, 457);
+            lightingUnkLabelField23C.Name = "lightingUnkLabelField23C";
+            lightingUnkLabelField23C.Size = new Size(54, 15);
+            lightingUnkLabelField23C.TabIndex = 118;
+            lightingUnkLabelField23C.Text = "Field23C";
+            // 
+            // lightingUnkLabelField1FC
+            // 
+            lightingUnkLabelField1FC.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField1FC.AutoSize = true;
+            lightingUnkLabelField1FC.Location = new Point(63, 457);
+            lightingUnkLabelField1FC.Name = "lightingUnkLabelField1FC";
+            lightingUnkLabelField1FC.Size = new Size(53, 15);
+            lightingUnkLabelField1FC.TabIndex = 116;
+            lightingUnkLabelField1FC.Text = "Field1FC";
+            // 
+            // lightingUnkLabelField238
+            // 
+            lightingUnkLabelField238.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField238.AutoSize = true;
+            lightingUnkLabelField238.Location = new Point(335, 427);
+            lightingUnkLabelField238.Name = "lightingUnkLabelField238";
+            lightingUnkLabelField238.Size = new Size(54, 15);
+            lightingUnkLabelField238.TabIndex = 115;
+            lightingUnkLabelField238.Text = "Field238";
+            // 
+            // lightingUnkLabelField1F8
+            // 
+            lightingUnkLabelField1F8.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField1F8.AutoSize = true;
+            lightingUnkLabelField1F8.Location = new Point(63, 427);
+            lightingUnkLabelField1F8.Name = "lightingUnkLabelField1F8";
+            lightingUnkLabelField1F8.Size = new Size(53, 15);
+            lightingUnkLabelField1F8.TabIndex = 113;
+            lightingUnkLabelField1F8.Text = "Field1F8";
+            // 
+            // lightingUnkLabelField234
+            // 
+            lightingUnkLabelField234.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField234.AutoSize = true;
+            lightingUnkLabelField234.Location = new Point(335, 397);
+            lightingUnkLabelField234.Name = "lightingUnkLabelField234";
+            lightingUnkLabelField234.Size = new Size(54, 15);
+            lightingUnkLabelField234.TabIndex = 112;
+            lightingUnkLabelField234.Text = "Field234";
+            // 
+            // lightingUnkLabelField1F4
+            // 
+            lightingUnkLabelField1F4.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField1F4.AutoSize = true;
+            lightingUnkLabelField1F4.Location = new Point(63, 397);
+            lightingUnkLabelField1F4.Name = "lightingUnkLabelField1F4";
+            lightingUnkLabelField1F4.Size = new Size(53, 15);
+            lightingUnkLabelField1F4.TabIndex = 110;
+            lightingUnkLabelField1F4.Text = "Field1F4";
+            // 
+            // lightingUnkLabelField230
+            // 
+            lightingUnkLabelField230.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField230.AutoSize = true;
+            lightingUnkLabelField230.Location = new Point(335, 367);
+            lightingUnkLabelField230.Name = "lightingUnkLabelField230";
+            lightingUnkLabelField230.Size = new Size(54, 15);
+            lightingUnkLabelField230.TabIndex = 109;
+            lightingUnkLabelField230.Text = "Field230";
+            // 
+            // lightingUnkLabelField1F0
+            // 
+            lightingUnkLabelField1F0.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField1F0.AutoSize = true;
+            lightingUnkLabelField1F0.Location = new Point(63, 367);
+            lightingUnkLabelField1F0.Name = "lightingUnkLabelField1F0";
+            lightingUnkLabelField1F0.Size = new Size(53, 15);
+            lightingUnkLabelField1F0.TabIndex = 107;
+            lightingUnkLabelField1F0.Text = "Field1F0";
+            // 
+            // lightingUnkLabelField22C
+            // 
+            lightingUnkLabelField22C.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField22C.AutoSize = true;
+            lightingUnkLabelField22C.Location = new Point(335, 337);
+            lightingUnkLabelField22C.Name = "lightingUnkLabelField22C";
+            lightingUnkLabelField22C.Size = new Size(54, 15);
+            lightingUnkLabelField22C.TabIndex = 106;
+            lightingUnkLabelField22C.Text = "Field22C";
+            // 
+            // sceneDarkLevelLabel
+            // 
+            sceneDarkLevelLabel.Anchor = AnchorStyles.Right;
+            sceneDarkLevelLabel.AutoSize = true;
+            sceneDarkLevelLabel.Location = new Point(12, 337);
+            sceneDarkLevelLabel.Name = "sceneDarkLevelLabel";
+            sceneDarkLevelLabel.Size = new Size(104, 15);
+            sceneDarkLevelLabel.TabIndex = 104;
+            sceneDarkLevelLabel.Text = "Scene Dark Level";
+            // 
+            // lightingUnkLabelField228
+            // 
+            lightingUnkLabelField228.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField228.AutoSize = true;
+            lightingUnkLabelField228.Location = new Point(335, 307);
+            lightingUnkLabelField228.Name = "lightingUnkLabelField228";
+            lightingUnkLabelField228.Size = new Size(54, 15);
+            lightingUnkLabelField228.TabIndex = 103;
+            lightingUnkLabelField228.Text = "Field228";
+            // 
+            // sceneWhiteLevelLabel
+            // 
+            sceneWhiteLevelLabel.Anchor = AnchorStyles.Right;
+            sceneWhiteLevelLabel.AutoSize = true;
+            sceneWhiteLevelLabel.Location = new Point(5, 307);
+            sceneWhiteLevelLabel.Name = "sceneWhiteLevelLabel";
+            sceneWhiteLevelLabel.Size = new Size(111, 15);
+            sceneWhiteLevelLabel.TabIndex = 101;
+            sceneWhiteLevelLabel.Text = "Scene White Level";
+            // 
+            // lightingUnkLabelField224
+            // 
+            lightingUnkLabelField224.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField224.AutoSize = true;
+            lightingUnkLabelField224.Location = new Point(335, 277);
+            lightingUnkLabelField224.Name = "lightingUnkLabelField224";
+            lightingUnkLabelField224.Size = new Size(54, 15);
+            lightingUnkLabelField224.TabIndex = 100;
+            lightingUnkLabelField224.Text = "Field224";
+            // 
+            // glareSensitivityLabel
+            // 
+            glareSensitivityLabel.Anchor = AnchorStyles.Right;
+            glareSensitivityLabel.AutoSize = true;
+            glareSensitivityLabel.Location = new Point(18, 277);
+            glareSensitivityLabel.Name = "glareSensitivityLabel";
+            glareSensitivityLabel.Size = new Size(98, 15);
+            glareSensitivityLabel.TabIndex = 98;
+            glareSensitivityLabel.Text = "Glare Sensitivity";
+            // 
+            // bloomDarkLevelLabel
+            // 
+            bloomDarkLevelLabel.Anchor = AnchorStyles.Right;
+            bloomDarkLevelLabel.AutoSize = true;
+            bloomDarkLevelLabel.Location = new Point(10, 247);
+            bloomDarkLevelLabel.Name = "bloomDarkLevelLabel";
+            bloomDarkLevelLabel.Size = new Size(106, 15);
+            bloomDarkLevelLabel.TabIndex = 95;
+            bloomDarkLevelLabel.Text = "Bloom Dark Level";
+            // 
+            // bloomWhiteLevelLabel
+            // 
+            bloomWhiteLevelLabel.Anchor = AnchorStyles.Right;
+            bloomWhiteLevelLabel.AutoSize = true;
+            bloomWhiteLevelLabel.Location = new Point(3, 217);
+            bloomWhiteLevelLabel.Name = "bloomWhiteLevelLabel";
+            bloomWhiteLevelLabel.Size = new Size(113, 15);
+            bloomWhiteLevelLabel.TabIndex = 92;
+            bloomWhiteLevelLabel.Text = "Bloom White Level";
+            // 
+            // redColorBoostLabel
+            // 
+            redColorBoostLabel.Anchor = AnchorStyles.Right;
+            redColorBoostLabel.AutoSize = true;
+            redColorBoostLabel.Location = new Point(293, 187);
+            redColorBoostLabel.Name = "redColorBoostLabel";
+            redColorBoostLabel.Size = new Size(96, 15);
+            redColorBoostLabel.TabIndex = 91;
+            redColorBoostLabel.Text = "Red Color Boost";
+            // 
+            // bloomDetailLabel
+            // 
+            bloomDetailLabel.Anchor = AnchorStyles.Right;
+            bloomDetailLabel.AutoSize = true;
+            bloomDetailLabel.Location = new Point(37, 187);
+            bloomDetailLabel.Name = "bloomDetailLabel";
+            bloomDetailLabel.Size = new Size(79, 15);
+            bloomDetailLabel.TabIndex = 89;
+            bloomDetailLabel.Text = "Bloom Detail";
+            // 
+            // lightingUnkLabelField214
+            // 
+            lightingUnkLabelField214.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField214.AutoSize = true;
+            lightingUnkLabelField214.Location = new Point(335, 157);
+            lightingUnkLabelField214.Name = "lightingUnkLabelField214";
+            lightingUnkLabelField214.Size = new Size(54, 15);
+            lightingUnkLabelField214.TabIndex = 88;
+            lightingUnkLabelField214.Text = "Field214";
+            // 
+            // lightingUnkLabelField210
+            // 
+            lightingUnkLabelField210.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField210.AutoSize = true;
+            lightingUnkLabelField210.Location = new Point(335, 127);
+            lightingUnkLabelField210.Name = "lightingUnkLabelField210";
+            lightingUnkLabelField210.Size = new Size(54, 15);
+            lightingUnkLabelField210.TabIndex = 86;
+            lightingUnkLabelField210.Text = "Field210";
+            // 
+            // lightingUnkLabelField20C
+            // 
+            lightingUnkLabelField20C.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField20C.AutoSize = true;
+            lightingUnkLabelField20C.Location = new Point(335, 97);
+            lightingUnkLabelField20C.Name = "lightingUnkLabelField20C";
+            lightingUnkLabelField20C.Size = new Size(54, 15);
+            lightingUnkLabelField20C.TabIndex = 84;
+            lightingUnkLabelField20C.Text = "Field20C";
+            // 
+            // lightingUnkLabelField208
+            // 
+            lightingUnkLabelField208.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField208.AutoSize = true;
+            lightingUnkLabelField208.Location = new Point(335, 67);
+            lightingUnkLabelField208.Name = "lightingUnkLabelField208";
+            lightingUnkLabelField208.Size = new Size(54, 15);
+            lightingUnkLabelField208.TabIndex = 82;
+            lightingUnkLabelField208.Text = "Field208";
+            // 
+            // lightingUnkBoxField1CC
+            // 
+            lightingUnkBoxField1CC.Anchor = AnchorStyles.Left;
+            lightingUnkBoxField1CC.AutoSize = true;
+            lightingUnkBoxField1CC.Location = new Point(125, 8);
+            lightingUnkBoxField1CC.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkBoxField1CC.Name = "lightingUnkBoxField1CC";
+            lightingUnkBoxField1CC.Size = new Size(15, 14);
+            lightingUnkBoxField1CC.TabIndex = 59;
+            lightingUnkBoxField1CC.UseVisualStyleBackColor = true;
+            // 
+            // lightingUnkLabelField1CD
+            // 
+            lightingUnkLabelField1CD.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField1CD.AutoSize = true;
+            lightingUnkLabelField1CD.Location = new Point(60, 37);
+            lightingUnkLabelField1CD.Name = "lightingUnkLabelField1CD";
+            lightingUnkLabelField1CD.Size = new Size(56, 15);
+            lightingUnkLabelField1CD.TabIndex = 12;
+            lightingUnkLabelField1CD.Text = "Field1CD";
+            // 
+            // lightingUnkLabelField1CC
+            // 
+            lightingUnkLabelField1CC.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField1CC.AutoSize = true;
+            lightingUnkLabelField1CC.Location = new Point(62, 7);
+            lightingUnkLabelField1CC.Name = "lightingUnkLabelField1CC";
+            lightingUnkLabelField1CC.Size = new Size(54, 15);
+            lightingUnkLabelField1CC.TabIndex = 6;
+            lightingUnkLabelField1CC.Text = "Field1CC";
+            // 
+            // lightingUnkLabelField200
+            // 
+            lightingUnkLabelField200.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField200.AutoSize = true;
+            lightingUnkLabelField200.Location = new Point(335, 7);
+            lightingUnkLabelField200.Name = "lightingUnkLabelField200";
+            lightingUnkLabelField200.Size = new Size(54, 15);
+            lightingUnkLabelField200.TabIndex = 8;
+            lightingUnkLabelField200.Text = "Field200";
+            lightingUnkLabelField200.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lightingUnkLabelField204
+            // 
+            lightingUnkLabelField204.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField204.AutoSize = true;
+            lightingUnkLabelField204.Location = new Point(335, 37);
+            lightingUnkLabelField204.Name = "lightingUnkLabelField204";
+            lightingUnkLabelField204.Size = new Size(54, 15);
+            lightingUnkLabelField204.TabIndex = 9;
+            lightingUnkLabelField204.Text = "Field204";
+            lightingUnkLabelField204.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // lightingUnkLabelField1CE
+            // 
+            lightingUnkLabelField1CE.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField1CE.AutoSize = true;
+            lightingUnkLabelField1CE.Location = new Point(63, 67);
+            lightingUnkLabelField1CE.Name = "lightingUnkLabelField1CE";
+            lightingUnkLabelField1CE.Size = new Size(53, 15);
+            lightingUnkLabelField1CE.TabIndex = 40;
+            lightingUnkLabelField1CE.Text = "Field1CE";
+            // 
+            // lightingUnkLabelField1CF
+            // 
+            lightingUnkLabelField1CF.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField1CF.AutoSize = true;
+            lightingUnkLabelField1CF.Location = new Point(63, 97);
+            lightingUnkLabelField1CF.Name = "lightingUnkLabelField1CF";
+            lightingUnkLabelField1CF.Size = new Size(53, 15);
+            lightingUnkLabelField1CF.TabIndex = 41;
+            lightingUnkLabelField1CF.Text = "Field1CF";
+            // 
+            // lightingUnkLabelField1D0
+            // 
+            lightingUnkLabelField1D0.Anchor = AnchorStyles.Right;
+            lightingUnkLabelField1D0.AutoSize = true;
+            lightingUnkLabelField1D0.Location = new Point(60, 127);
+            lightingUnkLabelField1D0.Name = "lightingUnkLabelField1D0";
+            lightingUnkLabelField1D0.Size = new Size(56, 15);
+            lightingUnkLabelField1D0.TabIndex = 42;
+            lightingUnkLabelField1D0.Text = "Field1D0";
+            // 
+            // bloomAmountLabel
+            // 
+            bloomAmountLabel.Anchor = AnchorStyles.Right;
+            bloomAmountLabel.AutoSize = true;
+            bloomAmountLabel.Location = new Point(25, 157);
+            bloomAmountLabel.Name = "bloomAmountLabel";
+            bloomAmountLabel.Size = new Size(91, 15);
+            bloomAmountLabel.TabIndex = 43;
+            bloomAmountLabel.Text = "Bloom Amount";
+            // 
+            // lightingUnkValueField1D0
+            // 
+            lightingUnkValueField1D0.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField1D0.AutoSize = true;
+            lightingUnkValueField1D0.Location = new Point(125, 123);
+            lightingUnkValueField1D0.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField1D0.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField1D0.Name = "lightingUnkValueField1D0";
+            lightingUnkValueField1D0.Size = new Size(71, 23);
+            lightingUnkValueField1D0.TabIndex = 47;
+            // 
+            // bloomAmountValue
+            // 
+            bloomAmountValue.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            bloomAmountValue.AutoSize = true;
+            bloomAmountValue.DecimalPlaces = 3;
+            bloomAmountValue.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            bloomAmountValue.Location = new Point(125, 153);
+            bloomAmountValue.Margin = new Padding(6, 3, 6, 3);
+            bloomAmountValue.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            bloomAmountValue.Name = "bloomAmountValue";
+            bloomAmountValue.Size = new Size(71, 23);
+            bloomAmountValue.TabIndex = 48;
+            // 
+            // bloomDetailValue
+            // 
+            bloomDetailValue.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            bloomDetailValue.AutoSize = true;
+            bloomDetailValue.DecimalPlaces = 3;
+            bloomDetailValue.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            bloomDetailValue.Location = new Point(125, 183);
+            bloomDetailValue.Margin = new Padding(6, 3, 6, 3);
+            bloomDetailValue.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            bloomDetailValue.Name = "bloomDetailValue";
+            bloomDetailValue.Size = new Size(71, 23);
+            bloomDetailValue.TabIndex = 49;
+            // 
+            // bloomWhiteLevelValue
+            // 
+            bloomWhiteLevelValue.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            bloomWhiteLevelValue.AutoSize = true;
+            bloomWhiteLevelValue.DecimalPlaces = 3;
+            bloomWhiteLevelValue.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            bloomWhiteLevelValue.Location = new Point(125, 213);
+            bloomWhiteLevelValue.Margin = new Padding(6, 3, 6, 3);
+            bloomWhiteLevelValue.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            bloomWhiteLevelValue.Name = "bloomWhiteLevelValue";
+            bloomWhiteLevelValue.Size = new Size(71, 23);
+            bloomWhiteLevelValue.TabIndex = 50;
+            // 
+            // bloomDarkLevelValue
+            // 
+            bloomDarkLevelValue.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            bloomDarkLevelValue.AutoSize = true;
+            bloomDarkLevelValue.DecimalPlaces = 3;
+            bloomDarkLevelValue.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            bloomDarkLevelValue.Location = new Point(125, 243);
+            bloomDarkLevelValue.Margin = new Padding(6, 3, 6, 3);
+            bloomDarkLevelValue.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            bloomDarkLevelValue.Name = "bloomDarkLevelValue";
+            bloomDarkLevelValue.Size = new Size(71, 23);
+            bloomDarkLevelValue.TabIndex = 51;
+            // 
+            // glareSensitivityValue
+            // 
+            glareSensitivityValue.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            glareSensitivityValue.AutoSize = true;
+            glareSensitivityValue.DecimalPlaces = 3;
+            glareSensitivityValue.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            glareSensitivityValue.Location = new Point(125, 273);
+            glareSensitivityValue.Margin = new Padding(6, 3, 6, 3);
+            glareSensitivityValue.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            glareSensitivityValue.Name = "glareSensitivityValue";
+            glareSensitivityValue.Size = new Size(71, 23);
+            glareSensitivityValue.TabIndex = 52;
+            // 
+            // sceneWhiteLevelValue
+            // 
+            sceneWhiteLevelValue.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            sceneWhiteLevelValue.AutoSize = true;
+            sceneWhiteLevelValue.DecimalPlaces = 3;
+            sceneWhiteLevelValue.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            sceneWhiteLevelValue.Location = new Point(125, 303);
+            sceneWhiteLevelValue.Margin = new Padding(6, 3, 6, 3);
+            sceneWhiteLevelValue.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            sceneWhiteLevelValue.Name = "sceneWhiteLevelValue";
+            sceneWhiteLevelValue.Size = new Size(71, 23);
+            sceneWhiteLevelValue.TabIndex = 53;
+            // 
+            // sceneDarkLevelValue
+            // 
+            sceneDarkLevelValue.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            sceneDarkLevelValue.AutoSize = true;
+            sceneDarkLevelValue.DecimalPlaces = 3;
+            sceneDarkLevelValue.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            sceneDarkLevelValue.Location = new Point(125, 333);
+            sceneDarkLevelValue.Margin = new Padding(6, 3, 6, 3);
+            sceneDarkLevelValue.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            sceneDarkLevelValue.Name = "sceneDarkLevelValue";
+            sceneDarkLevelValue.Size = new Size(71, 23);
+            sceneDarkLevelValue.TabIndex = 54;
+            // 
+            // lightingUnkValueField1F0
+            // 
+            lightingUnkValueField1F0.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField1F0.AutoSize = true;
+            lightingUnkValueField1F0.DecimalPlaces = 3;
+            lightingUnkValueField1F0.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField1F0.Location = new Point(125, 363);
+            lightingUnkValueField1F0.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField1F0.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField1F0.Name = "lightingUnkValueField1F0";
+            lightingUnkValueField1F0.Size = new Size(71, 23);
+            lightingUnkValueField1F0.TabIndex = 55;
+            // 
+            // lightingUnkValueField1F4
+            // 
+            lightingUnkValueField1F4.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField1F4.AutoSize = true;
+            lightingUnkValueField1F4.DecimalPlaces = 3;
+            lightingUnkValueField1F4.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField1F4.Location = new Point(125, 393);
+            lightingUnkValueField1F4.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField1F4.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField1F4.Name = "lightingUnkValueField1F4";
+            lightingUnkValueField1F4.Size = new Size(71, 23);
+            lightingUnkValueField1F4.TabIndex = 56;
+            // 
+            // lightingUnkValueField1F8
+            // 
+            lightingUnkValueField1F8.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField1F8.AutoSize = true;
+            lightingUnkValueField1F8.DecimalPlaces = 3;
+            lightingUnkValueField1F8.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField1F8.Location = new Point(125, 423);
+            lightingUnkValueField1F8.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField1F8.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField1F8.Name = "lightingUnkValueField1F8";
+            lightingUnkValueField1F8.Size = new Size(71, 23);
+            lightingUnkValueField1F8.TabIndex = 57;
+            // 
+            // lightingUnkValueField1FC
+            // 
+            lightingUnkValueField1FC.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField1FC.AutoSize = true;
+            lightingUnkValueField1FC.Location = new Point(125, 453);
+            lightingUnkValueField1FC.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField1FC.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField1FC.Name = "lightingUnkValueField1FC";
+            lightingUnkValueField1FC.Size = new Size(71, 23);
+            lightingUnkValueField1FC.TabIndex = 58;
+            // 
+            // lightingUnkBoxField1CD
+            // 
+            lightingUnkBoxField1CD.Anchor = AnchorStyles.Left;
+            lightingUnkBoxField1CD.AutoSize = true;
+            lightingUnkBoxField1CD.Location = new Point(125, 38);
+            lightingUnkBoxField1CD.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkBoxField1CD.Name = "lightingUnkBoxField1CD";
+            lightingUnkBoxField1CD.Size = new Size(15, 14);
+            lightingUnkBoxField1CD.TabIndex = 60;
+            lightingUnkBoxField1CD.UseVisualStyleBackColor = true;
+            // 
+            // lightingUnkBoxField1CE
+            // 
+            lightingUnkBoxField1CE.Anchor = AnchorStyles.Left;
+            lightingUnkBoxField1CE.AutoSize = true;
+            lightingUnkBoxField1CE.Location = new Point(125, 68);
+            lightingUnkBoxField1CE.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkBoxField1CE.Name = "lightingUnkBoxField1CE";
+            lightingUnkBoxField1CE.Size = new Size(15, 14);
+            lightingUnkBoxField1CE.TabIndex = 61;
+            lightingUnkBoxField1CE.UseVisualStyleBackColor = true;
+            // 
+            // lightingUnkBoxField1CF
+            // 
+            lightingUnkBoxField1CF.Anchor = AnchorStyles.Left;
+            lightingUnkBoxField1CF.AutoSize = true;
+            lightingUnkBoxField1CF.Location = new Point(125, 98);
+            lightingUnkBoxField1CF.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkBoxField1CF.Name = "lightingUnkBoxField1CF";
+            lightingUnkBoxField1CF.Size = new Size(15, 14);
+            lightingUnkBoxField1CF.TabIndex = 62;
+            lightingUnkBoxField1CF.UseVisualStyleBackColor = true;
+            // 
+            // lightingUnkValueField200
+            // 
+            lightingUnkValueField200.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField200.AutoSize = true;
+            lightingUnkValueField200.DecimalPlaces = 3;
+            lightingUnkValueField200.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField200.Location = new Point(398, 3);
+            lightingUnkValueField200.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField200.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField200.Name = "lightingUnkValueField200";
+            lightingUnkValueField200.Size = new Size(75, 23);
+            lightingUnkValueField200.TabIndex = 63;
+            // 
+            // lightingUnkValueField204
+            // 
+            lightingUnkValueField204.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField204.AutoSize = true;
+            lightingUnkValueField204.DecimalPlaces = 3;
+            lightingUnkValueField204.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField204.Location = new Point(398, 33);
+            lightingUnkValueField204.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField204.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField204.Name = "lightingUnkValueField204";
+            lightingUnkValueField204.Size = new Size(75, 23);
+            lightingUnkValueField204.TabIndex = 64;
+            // 
+            // lightingUnkValueField208
+            // 
+            lightingUnkValueField208.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField208.AutoSize = true;
+            lightingUnkValueField208.Location = new Point(398, 63);
+            lightingUnkValueField208.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField208.Maximum = new decimal(new int[] { 256, 0, 0, 0 });
+            lightingUnkValueField208.Minimum = new decimal(new int[] { 256, 0, 0, int.MinValue });
+            lightingUnkValueField208.Name = "lightingUnkValueField208";
+            lightingUnkValueField208.Size = new Size(75, 23);
+            lightingUnkValueField208.TabIndex = 65;
+            // 
+            // lightingUnkValueField20C
+            // 
+            lightingUnkValueField20C.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField20C.AutoSize = true;
+            lightingUnkValueField20C.Location = new Point(398, 93);
+            lightingUnkValueField20C.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField20C.Maximum = new decimal(new int[] { 256, 0, 0, 0 });
+            lightingUnkValueField20C.Minimum = new decimal(new int[] { 256, 0, 0, int.MinValue });
+            lightingUnkValueField20C.Name = "lightingUnkValueField20C";
+            lightingUnkValueField20C.Size = new Size(75, 23);
+            lightingUnkValueField20C.TabIndex = 66;
+            // 
+            // lightingUnkValueField210
+            // 
+            lightingUnkValueField210.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField210.AutoSize = true;
+            lightingUnkValueField210.DecimalPlaces = 3;
+            lightingUnkValueField210.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField210.Location = new Point(398, 123);
+            lightingUnkValueField210.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField210.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField210.Name = "lightingUnkValueField210";
+            lightingUnkValueField210.Size = new Size(75, 23);
+            lightingUnkValueField210.TabIndex = 67;
+            // 
+            // lightingUnkValueField214
+            // 
+            lightingUnkValueField214.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField214.AutoSize = true;
+            lightingUnkValueField214.DecimalPlaces = 3;
+            lightingUnkValueField214.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField214.Location = new Point(398, 153);
+            lightingUnkValueField214.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField214.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField214.Name = "lightingUnkValueField214";
+            lightingUnkValueField214.Size = new Size(75, 23);
+            lightingUnkValueField214.TabIndex = 68;
+            // 
+            // redColorBoostValue
+            // 
+            redColorBoostValue.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            redColorBoostValue.AutoSize = true;
+            redColorBoostValue.DecimalPlaces = 3;
+            redColorBoostValue.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            redColorBoostValue.Location = new Point(398, 183);
+            redColorBoostValue.Margin = new Padding(6, 3, 6, 3);
+            redColorBoostValue.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            redColorBoostValue.Name = "redColorBoostValue";
+            redColorBoostValue.Size = new Size(75, 23);
+            redColorBoostValue.TabIndex = 69;
+            // 
+            // lightingUnkValueField224
+            // 
+            lightingUnkValueField224.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField224.AutoSize = true;
+            lightingUnkValueField224.DecimalPlaces = 3;
+            lightingUnkValueField224.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField224.Location = new Point(398, 273);
+            lightingUnkValueField224.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField224.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField224.Name = "lightingUnkValueField224";
+            lightingUnkValueField224.Size = new Size(75, 23);
+            lightingUnkValueField224.TabIndex = 72;
+            // 
+            // lightingUnkValueField228
+            // 
+            lightingUnkValueField228.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField228.AutoSize = true;
+            lightingUnkValueField228.DecimalPlaces = 3;
+            lightingUnkValueField228.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField228.Location = new Point(398, 303);
+            lightingUnkValueField228.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField228.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField228.Name = "lightingUnkValueField228";
+            lightingUnkValueField228.Size = new Size(75, 23);
+            lightingUnkValueField228.TabIndex = 73;
+            // 
+            // lightingUnkValueField22C
+            // 
+            lightingUnkValueField22C.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField22C.AutoSize = true;
+            lightingUnkValueField22C.DecimalPlaces = 3;
+            lightingUnkValueField22C.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField22C.Location = new Point(398, 333);
+            lightingUnkValueField22C.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField22C.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField22C.Name = "lightingUnkValueField22C";
+            lightingUnkValueField22C.Size = new Size(75, 23);
+            lightingUnkValueField22C.TabIndex = 74;
+            // 
+            // lightingUnkValueField230
+            // 
+            lightingUnkValueField230.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField230.AutoSize = true;
+            lightingUnkValueField230.DecimalPlaces = 3;
+            lightingUnkValueField230.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField230.Location = new Point(398, 363);
+            lightingUnkValueField230.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField230.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField230.Name = "lightingUnkValueField230";
+            lightingUnkValueField230.Size = new Size(75, 23);
+            lightingUnkValueField230.TabIndex = 75;
+            // 
+            // lightingUnkValueField234
+            // 
+            lightingUnkValueField234.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField234.AutoSize = true;
+            lightingUnkValueField234.DecimalPlaces = 3;
+            lightingUnkValueField234.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField234.Location = new Point(398, 393);
+            lightingUnkValueField234.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField234.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField234.Name = "lightingUnkValueField234";
+            lightingUnkValueField234.Size = new Size(75, 23);
+            lightingUnkValueField234.TabIndex = 76;
+            // 
+            // lightingUnkValueField238
+            // 
+            lightingUnkValueField238.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField238.AutoSize = true;
+            lightingUnkValueField238.DecimalPlaces = 3;
+            lightingUnkValueField238.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField238.Location = new Point(398, 423);
+            lightingUnkValueField238.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField238.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField238.Name = "lightingUnkValueField238";
+            lightingUnkValueField238.Size = new Size(75, 23);
+            lightingUnkValueField238.TabIndex = 77;
+            // 
+            // lightingUnkValueField23C
+            // 
+            lightingUnkValueField23C.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lightingUnkValueField23C.AutoSize = true;
+            lightingUnkValueField23C.DecimalPlaces = 3;
+            lightingUnkValueField23C.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            lightingUnkValueField23C.Location = new Point(398, 453);
+            lightingUnkValueField23C.Margin = new Padding(6, 3, 6, 3);
+            lightingUnkValueField23C.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            lightingUnkValueField23C.Name = "lightingUnkValueField23C";
+            lightingUnkValueField23C.Size = new Size(75, 23);
+            lightingUnkValueField23C.TabIndex = 78;
+            // 
+            // greenColorBoostValue
+            // 
+            greenColorBoostValue.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            greenColorBoostValue.AutoSize = true;
+            greenColorBoostValue.DecimalPlaces = 3;
+            greenColorBoostValue.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            greenColorBoostValue.Location = new Point(398, 213);
+            greenColorBoostValue.Margin = new Padding(6, 3, 6, 3);
+            greenColorBoostValue.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            greenColorBoostValue.Name = "greenColorBoostValue";
+            greenColorBoostValue.Size = new Size(75, 23);
+            greenColorBoostValue.TabIndex = 71;
+            // 
+            // blueColorBoostValue
+            // 
+            blueColorBoostValue.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            blueColorBoostValue.AutoSize = true;
+            blueColorBoostValue.DecimalPlaces = 3;
+            blueColorBoostValue.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            blueColorBoostValue.Location = new Point(398, 243);
+            blueColorBoostValue.Margin = new Padding(6, 3, 6, 3);
+            blueColorBoostValue.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            blueColorBoostValue.Name = "blueColorBoostValue";
+            blueColorBoostValue.Size = new Size(75, 23);
+            blueColorBoostValue.TabIndex = 70;
+            // 
+            // greenColorBoostLabel
+            // 
+            greenColorBoostLabel.Anchor = AnchorStyles.Right;
+            greenColorBoostLabel.AutoSize = true;
+            greenColorBoostLabel.Location = new Point(280, 217);
+            greenColorBoostLabel.Name = "greenColorBoostLabel";
+            greenColorBoostLabel.Size = new Size(109, 15);
+            greenColorBoostLabel.TabIndex = 97;
+            greenColorBoostLabel.Text = "Green Color Boost";
+            // 
+            // blueColorBoostLabel
+            // 
+            blueColorBoostLabel.Anchor = AnchorStyles.Right;
+            blueColorBoostLabel.AutoSize = true;
+            blueColorBoostLabel.Location = new Point(290, 247);
+            blueColorBoostLabel.Name = "blueColorBoostLabel";
+            blueColorBoostLabel.Size = new Size(99, 15);
+            blueColorBoostLabel.TabIndex = 94;
+            blueColorBoostLabel.Text = "Blue Color Boost";
             // 
             // bloomSettingsGroupBox
             // 
@@ -3786,10 +4742,10 @@
             bloomSettingsGroupBox.Location = new Point(312, 10);
             bloomSettingsGroupBox.Name = "bloomSettingsGroupBox";
             bloomSettingsGroupBox.Padding = new Padding(6, 0, 6, 0);
-            bloomSettingsGroupBox.Size = new Size(316, 122);
+            bloomSettingsGroupBox.Size = new Size(297, 122);
             bloomSettingsGroupBox.TabIndex = 7;
             bloomSettingsGroupBox.TabStop = false;
-            bloomSettingsGroupBox.Text = "Bloom Settings";
+            bloomSettingsGroupBox.Text = "Bloom Settings (Vanilla Only)";
             // 
             // bloomSettingsTable
             // 
@@ -3895,7 +4851,7 @@
             colorCorrectionGroupBox.Location = new Point(10, 399);
             colorCorrectionGroupBox.Name = "colorCorrectionGroupBox";
             colorCorrectionGroupBox.Padding = new Padding(6, 0, 6, 0);
-            colorCorrectionGroupBox.Size = new Size(618, 166);
+            colorCorrectionGroupBox.Size = new Size(599, 166);
             colorCorrectionGroupBox.TabIndex = 6;
             colorCorrectionGroupBox.TabStop = false;
             colorCorrectionGroupBox.Text = "Color Correction Settings (colors can go negative)";
@@ -3914,7 +4870,7 @@
             // 
             enableColorCorrectionLabel.Anchor = AnchorStyles.Right;
             enableColorCorrectionLabel.AutoSize = true;
-            enableColorCorrectionLabel.Location = new Point(233, 28);
+            enableColorCorrectionLabel.Location = new Point(214, 28);
             enableColorCorrectionLabel.Name = "enableColorCorrectionLabel";
             enableColorCorrectionLabel.Size = new Size(137, 15);
             enableColorCorrectionLabel.TabIndex = 39;
@@ -4100,7 +5056,7 @@
             diffusionFilterGroupBox.Location = new Point(10, 297);
             diffusionFilterGroupBox.Name = "diffusionFilterGroupBox";
             diffusionFilterGroupBox.Padding = new Padding(6, 0, 6, 0);
-            diffusionFilterGroupBox.Size = new Size(618, 96);
+            diffusionFilterGroupBox.Size = new Size(599, 96);
             diffusionFilterGroupBox.TabIndex = 5;
             diffusionFilterGroupBox.TabStop = false;
             diffusionFilterGroupBox.Text = "Diffusion Filter Settings";
@@ -4122,12 +5078,12 @@
             diffusionFilterSettingsTable.Controls.Add(diffusionFilterStrengthValue, 4, 0);
             diffusionFilterSettingsTable.Controls.Add(diffusionFilterBrightness2Value, 4, 1);
             diffusionFilterSettingsTable.Controls.Add(diffusionFilterBrightnessValue, 1, 1);
-            diffusionFilterSettingsTable.Location = new Point(24, 19);
+            diffusionFilterSettingsTable.Location = new Point(15, 19);
             diffusionFilterSettingsTable.Name = "diffusionFilterSettingsTable";
             diffusionFilterSettingsTable.RowCount = 2;
             diffusionFilterSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             diffusionFilterSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            diffusionFilterSettingsTable.Size = new Size(566, 62);
+            diffusionFilterSettingsTable.Size = new Size(575, 62);
             diffusionFilterSettingsTable.TabIndex = 4;
             // 
             // enableDiffusionFilterBox
@@ -4191,9 +5147,9 @@
             diffusionFilterStrengthValue.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
             diffusionFilterStrengthValue.Location = new Point(496, 3);
             diffusionFilterStrengthValue.Margin = new Padding(6, 3, 6, 3);
-            diffusionFilterStrengthValue.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
+            diffusionFilterStrengthValue.Maximum = new decimal(new int[] { 15, 0, 0, 65536 });
             diffusionFilterStrengthValue.Name = "diffusionFilterStrengthValue";
-            diffusionFilterStrengthValue.Size = new Size(64, 23);
+            diffusionFilterStrengthValue.Size = new Size(73, 23);
             diffusionFilterStrengthValue.TabIndex = 32;
             // 
             // diffusionFilterBrightness2Value
@@ -4206,7 +5162,7 @@
             diffusionFilterBrightness2Value.Margin = new Padding(6, 3, 6, 3);
             diffusionFilterBrightness2Value.Maximum = new decimal(new int[] { 2, 0, 0, 0 });
             diffusionFilterBrightness2Value.Name = "diffusionFilterBrightness2Value";
-            diffusionFilterBrightness2Value.Size = new Size(64, 23);
+            diffusionFilterBrightness2Value.Size = new Size(73, 23);
             diffusionFilterBrightness2Value.TabIndex = 33;
             // 
             // diffusionFilterBrightnessValue
@@ -4230,7 +5186,7 @@
             starGlareSettingsGroupBox.Location = new Point(10, 138);
             starGlareSettingsGroupBox.Name = "starGlareSettingsGroupBox";
             starGlareSettingsGroupBox.Padding = new Padding(6, 0, 6, 0);
-            starGlareSettingsGroupBox.Size = new Size(618, 153);
+            starGlareSettingsGroupBox.Size = new Size(599, 153);
             starGlareSettingsGroupBox.TabIndex = 4;
             starGlareSettingsGroupBox.TabStop = false;
             starGlareSettingsGroupBox.Text = "Star Glare Settings";
@@ -4259,14 +5215,14 @@
             starGlareSettingsTable.Controls.Add(starGlareTiltLabel, 3, 1);
             starGlareSettingsTable.Controls.Add(starGlareTiltValue, 4, 1);
             starGlareSettingsTable.Controls.Add(starGlareStrengthValue, 1, 2);
-            starGlareSettingsTable.Location = new Point(38, 19);
+            starGlareSettingsTable.Location = new Point(31, 19);
             starGlareSettingsTable.Name = "starGlareSettingsTable";
             starGlareSettingsTable.RowCount = 4;
             starGlareSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             starGlareSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             starGlareSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             starGlareSettingsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            starGlareSettingsTable.Size = new Size(552, 120);
+            starGlareSettingsTable.Size = new Size(559, 120);
             starGlareSettingsTable.TabIndex = 4;
             // 
             // enableStarGlareBox
@@ -4373,7 +5329,7 @@
             starGlareCAValue.Margin = new Padding(6, 3, 6, 3);
             starGlareCAValue.Maximum = new decimal(new int[] { 5, 0, 0, 0 });
             starGlareCAValue.Name = "starGlareCAValue";
-            starGlareCAValue.Size = new Size(65, 23);
+            starGlareCAValue.Size = new Size(72, 23);
             starGlareCAValue.TabIndex = 28;
             // 
             // starGlareCALabel
@@ -4395,7 +5351,7 @@
             starGlareScaleValue.Margin = new Padding(6, 3, 6, 3);
             starGlareScaleValue.Maximum = new decimal(new int[] { 500, 0, 0, 0 });
             starGlareScaleValue.Name = "starGlareScaleValue";
-            starGlareScaleValue.Size = new Size(65, 23);
+            starGlareScaleValue.Size = new Size(72, 23);
             starGlareScaleValue.TabIndex = 32;
             // 
             // starGlareScaleLabel
@@ -4428,7 +5384,7 @@
             starGlareTiltValue.Margin = new Padding(6, 3, 6, 3);
             starGlareTiltValue.Maximum = new decimal(new int[] { 360, 0, 0, 0 });
             starGlareTiltValue.Name = "starGlareTiltValue";
-            starGlareTiltValue.Size = new Size(65, 23);
+            starGlareTiltValue.Size = new Size(72, 23);
             starGlareTiltValue.TabIndex = 30;
             // 
             // starGlareStrengthValue
@@ -4548,15 +5504,221 @@
             // fieldShadowTab
             // 
             fieldShadowTab.AutoScroll = true;
+            fieldShadowTab.Controls.Add(shadowColorGroupBox);
             fieldShadowTab.Controls.Add(shadowUnkSettingsGroupBox);
             fieldShadowTab.Controls.Add(shadowSettingsGroupBox);
             fieldShadowTab.Location = new Point(4, 24);
             fieldShadowTab.Name = "fieldShadowTab";
             fieldShadowTab.Padding = new Padding(3);
-            fieldShadowTab.Size = new Size(636, 667);
+            fieldShadowTab.Size = new Size(636, 672);
             fieldShadowTab.TabIndex = 5;
             fieldShadowTab.Text = "Shadows";
             fieldShadowTab.UseVisualStyleBackColor = true;
+            // 
+            // shadowColorGroupBox
+            // 
+            shadowColorGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            shadowColorGroupBox.Controls.Add(shadowColorSwatch);
+            shadowColorGroupBox.Controls.Add(shadowColorTable);
+            shadowColorGroupBox.FlatStyle = FlatStyle.Flat;
+            shadowColorGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            shadowColorGroupBox.Location = new Point(10, 135);
+            shadowColorGroupBox.Name = "shadowColorGroupBox";
+            shadowColorGroupBox.Padding = new Padding(6, 0, 6, 0);
+            shadowColorGroupBox.Size = new Size(618, 178);
+            shadowColorGroupBox.TabIndex = 9;
+            shadowColorGroupBox.TabStop = false;
+            shadowColorGroupBox.Text = "Shadow Color (Royal Only)";
+            // 
+            // shadowColorSwatch
+            // 
+            shadowColorSwatch.BackColor = Color.Black;
+            shadowColorSwatch.BorderStyle = BorderStyle.FixedSingle;
+            shadowColorSwatch.Location = new Point(31, 41);
+            shadowColorSwatch.Margin = new Padding(25);
+            shadowColorSwatch.MaximumSize = new Size(100, 100);
+            shadowColorSwatch.MinimumSize = new Size(100, 100);
+            shadowColorSwatch.Name = "shadowColorSwatch";
+            shadowColorSwatch.Size = new Size(100, 100);
+            shadowColorSwatch.TabIndex = 1;
+            // 
+            // shadowColorTable
+            // 
+            shadowColorTable.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            shadowColorTable.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            shadowColorTable.ColumnCount = 4;
+            shadowColorTable.ColumnStyles.Add(new ColumnStyle());
+            shadowColorTable.ColumnStyles.Add(new ColumnStyle());
+            shadowColorTable.ColumnStyles.Add(new ColumnStyle());
+            shadowColorTable.ColumnStyles.Add(new ColumnStyle());
+            shadowColorTable.Controls.Add(shadowColorValueB, 3, 2);
+            shadowColorTable.Controls.Add(shadowColorSliderR, 2, 0);
+            shadowColorTable.Controls.Add(shadowColorValueG, 3, 1);
+            shadowColorTable.Controls.Add(shadowColorLabelB, 1, 2);
+            shadowColorTable.Controls.Add(shadowColorLabelG, 1, 1);
+            shadowColorTable.Controls.Add(shadowColorLabelR, 1, 0);
+            shadowColorTable.Controls.Add(shadowColorValueR, 3, 0);
+            shadowColorTable.Controls.Add(shadowColorLabelA, 1, 3);
+            shadowColorTable.Controls.Add(shadowColorValueA, 3, 3);
+            shadowColorTable.Controls.Add(shadowColorSliderG, 2, 1);
+            shadowColorTable.Controls.Add(shadowColorSliderB, 2, 2);
+            shadowColorTable.Controls.Add(shadowColorSliderA, 2, 3);
+            shadowColorTable.Location = new Point(162, 22);
+            shadowColorTable.Margin = new Padding(6);
+            shadowColorTable.Name = "shadowColorTable";
+            shadowColorTable.RowCount = 4;
+            shadowColorTable.RowStyles.Add(new RowStyle());
+            shadowColorTable.RowStyles.Add(new RowStyle());
+            shadowColorTable.RowStyles.Add(new RowStyle());
+            shadowColorTable.RowStyles.Add(new RowStyle());
+            shadowColorTable.Size = new Size(432, 142);
+            shadowColorTable.TabIndex = 0;
+            // 
+            // shadowColorValueB
+            // 
+            shadowColorValueB.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            shadowColorValueB.AutoSize = true;
+            shadowColorValueB.BackColor = SystemColors.Window;
+            shadowColorValueB.Location = new Point(353, 76);
+            shadowColorValueB.Margin = new Padding(5, 3, 5, 3);
+            shadowColorValueB.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            shadowColorValueB.Name = "shadowColorValueB";
+            shadowColorValueB.Size = new Size(73, 23);
+            shadowColorValueB.TabIndex = 10;
+            shadowColorValueB.TextAlign = HorizontalAlignment.Center;
+            shadowColorValueB.ValueChanged += shadowColorValueB_ValueChanged;
+            // 
+            // shadowColorSliderR
+            // 
+            shadowColorSliderR.AutoSize = false;
+            shadowColorSliderR.Location = new Point(54, 4);
+            shadowColorSliderR.Maximum = 255;
+            shadowColorSliderR.Name = "shadowColorSliderR";
+            shadowColorSliderR.Size = new Size(290, 28);
+            shadowColorSliderR.TabIndex = 2;
+            shadowColorSliderR.TickStyle = TickStyle.None;
+            shadowColorSliderR.Scroll += shadowColorSliderR_Scroll;
+            // 
+            // shadowColorValueG
+            // 
+            shadowColorValueG.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            shadowColorValueG.AutoSize = true;
+            shadowColorValueG.BackColor = SystemColors.Window;
+            shadowColorValueG.Location = new Point(353, 41);
+            shadowColorValueG.Margin = new Padding(5, 3, 5, 3);
+            shadowColorValueG.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            shadowColorValueG.Name = "shadowColorValueG";
+            shadowColorValueG.Size = new Size(73, 23);
+            shadowColorValueG.TabIndex = 8;
+            shadowColorValueG.TextAlign = HorizontalAlignment.Center;
+            shadowColorValueG.ValueChanged += shadowColorValueG_ValueChanged;
+            // 
+            // shadowColorLabelB
+            // 
+            shadowColorLabelB.AutoSize = true;
+            shadowColorLabelB.Dock = DockStyle.Fill;
+            shadowColorLabelB.Location = new Point(5, 71);
+            shadowColorLabelB.Name = "shadowColorLabelB";
+            shadowColorLabelB.Size = new Size(42, 34);
+            shadowColorLabelB.TabIndex = 5;
+            shadowColorLabelB.Text = "Blue";
+            shadowColorLabelB.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // shadowColorLabelG
+            // 
+            shadowColorLabelG.AutoSize = true;
+            shadowColorLabelG.Dock = DockStyle.Fill;
+            shadowColorLabelG.Location = new Point(5, 36);
+            shadowColorLabelG.Name = "shadowColorLabelG";
+            shadowColorLabelG.Size = new Size(42, 34);
+            shadowColorLabelG.TabIndex = 4;
+            shadowColorLabelG.Text = "Green";
+            shadowColorLabelG.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // shadowColorLabelR
+            // 
+            shadowColorLabelR.AutoSize = true;
+            shadowColorLabelR.Dock = DockStyle.Fill;
+            shadowColorLabelR.Location = new Point(5, 1);
+            shadowColorLabelR.Name = "shadowColorLabelR";
+            shadowColorLabelR.Size = new Size(42, 34);
+            shadowColorLabelR.TabIndex = 1;
+            shadowColorLabelR.Text = "Red";
+            shadowColorLabelR.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // shadowColorValueR
+            // 
+            shadowColorValueR.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            shadowColorValueR.AutoSize = true;
+            shadowColorValueR.BackColor = SystemColors.Window;
+            shadowColorValueR.Location = new Point(353, 6);
+            shadowColorValueR.Margin = new Padding(5, 3, 5, 3);
+            shadowColorValueR.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            shadowColorValueR.Name = "shadowColorValueR";
+            shadowColorValueR.Size = new Size(73, 23);
+            shadowColorValueR.TabIndex = 3;
+            shadowColorValueR.TextAlign = HorizontalAlignment.Center;
+            shadowColorValueR.ValueChanged += shadowColorValueR_ValueChanged;
+            // 
+            // shadowColorLabelA
+            // 
+            shadowColorLabelA.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            shadowColorLabelA.AutoSize = true;
+            shadowColorLabelA.Location = new Point(7, 106);
+            shadowColorLabelA.Name = "shadowColorLabelA";
+            shadowColorLabelA.Size = new Size(38, 35);
+            shadowColorLabelA.TabIndex = 6;
+            shadowColorLabelA.Text = "Alpha";
+            shadowColorLabelA.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // shadowColorValueA
+            // 
+            shadowColorValueA.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            shadowColorValueA.AutoSize = true;
+            shadowColorValueA.BackColor = SystemColors.Window;
+            shadowColorValueA.Location = new Point(353, 112);
+            shadowColorValueA.Margin = new Padding(5, 3, 5, 3);
+            shadowColorValueA.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            shadowColorValueA.Name = "shadowColorValueA";
+            shadowColorValueA.Size = new Size(73, 23);
+            shadowColorValueA.TabIndex = 12;
+            shadowColorValueA.TextAlign = HorizontalAlignment.Center;
+            shadowColorValueA.Value = new decimal(new int[] { 255, 0, 0, 0 });
+            shadowColorValueA.ValueChanged += shadowColorValueA_ValueChanged;
+            // 
+            // shadowColorSliderG
+            // 
+            shadowColorSliderG.AutoSize = false;
+            shadowColorSliderG.Location = new Point(54, 39);
+            shadowColorSliderG.Maximum = 255;
+            shadowColorSliderG.Name = "shadowColorSliderG";
+            shadowColorSliderG.Size = new Size(290, 28);
+            shadowColorSliderG.TabIndex = 13;
+            shadowColorSliderG.TickStyle = TickStyle.None;
+            shadowColorSliderG.Scroll += shadowColorSliderG_Scroll;
+            // 
+            // shadowColorSliderB
+            // 
+            shadowColorSliderB.AutoSize = false;
+            shadowColorSliderB.Location = new Point(54, 74);
+            shadowColorSliderB.Maximum = 255;
+            shadowColorSliderB.Name = "shadowColorSliderB";
+            shadowColorSliderB.Size = new Size(290, 28);
+            shadowColorSliderB.TabIndex = 14;
+            shadowColorSliderB.TickStyle = TickStyle.None;
+            shadowColorSliderB.Scroll += shadowColorSliderB_Scroll;
+            // 
+            // shadowColorSliderA
+            // 
+            shadowColorSliderA.AutoSize = false;
+            shadowColorSliderA.Location = new Point(54, 109);
+            shadowColorSliderA.Maximum = 255;
+            shadowColorSliderA.Name = "shadowColorSliderA";
+            shadowColorSliderA.Size = new Size(290, 28);
+            shadowColorSliderA.TabIndex = 15;
+            shadowColorSliderA.TickStyle = TickStyle.None;
+            shadowColorSliderA.Value = 255;
+            shadowColorSliderA.Scroll += shadowColorSliderA_Scroll;
             // 
             // shadowUnkSettingsGroupBox
             // 
@@ -4564,7 +5726,7 @@
             shadowUnkSettingsGroupBox.Controls.Add(shadowUnkSettingsTable);
             shadowUnkSettingsGroupBox.FlatStyle = FlatStyle.Flat;
             shadowUnkSettingsGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            shadowUnkSettingsGroupBox.Location = new Point(10, 135);
+            shadowUnkSettingsGroupBox.Location = new Point(10, 319);
             shadowUnkSettingsGroupBox.Name = "shadowUnkSettingsGroupBox";
             shadowUnkSettingsGroupBox.Padding = new Padding(6, 0, 6, 0);
             shadowUnkSettingsGroupBox.Size = new Size(618, 119);
@@ -4895,7 +6057,7 @@
             dofSSAOPage.Location = new Point(4, 24);
             dofSSAOPage.Name = "dofSSAOPage";
             dofSSAOPage.Padding = new Padding(3);
-            dofSSAOPage.Size = new Size(636, 667);
+            dofSSAOPage.Size = new Size(636, 672);
             dofSSAOPage.TabIndex = 4;
             dofSSAOPage.Text = "DoF & SSAO";
             dofSSAOPage.UseVisualStyleBackColor = true;
@@ -5277,17 +6439,21 @@
             dofFarBlurLimitValue.Size = new Size(75, 23);
             dofFarBlurLimitValue.TabIndex = 43;
             // 
-            // skyPhysicsPage
+            // miscPage
             // 
-            skyPhysicsPage.Controls.Add(physicsSettingsGroupBox);
-            skyPhysicsPage.Controls.Add(skyColorGroupBox);
-            skyPhysicsPage.Location = new Point(4, 24);
-            skyPhysicsPage.Name = "skyPhysicsPage";
-            skyPhysicsPage.Padding = new Padding(3);
-            skyPhysicsPage.Size = new Size(636, 667);
-            skyPhysicsPage.TabIndex = 8;
-            skyPhysicsPage.Text = "Sky & Physics";
-            skyPhysicsPage.UseVisualStyleBackColor = true;
+            miscPage.AutoScroll = true;
+            miscPage.Controls.Add(physicsSettingsGroupBox);
+            miscPage.Controls.Add(skyColorGroupBox);
+            miscPage.Controls.Add(miscExtraGroupBox);
+            miscPage.Controls.Add(characterOutlineGroupBox);
+            miscPage.Controls.Add(lightMapColorGroupBox);
+            miscPage.Location = new Point(4, 24);
+            miscPage.Name = "miscPage";
+            miscPage.Padding = new Padding(3);
+            miscPage.Size = new Size(636, 672);
+            miscPage.TabIndex = 7;
+            miscPage.Text = "Misc";
+            miscPage.UseVisualStyleBackColor = true;
             // 
             // physicsSettingsGroupBox
             // 
@@ -5298,7 +6464,7 @@
             physicsSettingsGroupBox.Location = new Point(10, 194);
             physicsSettingsGroupBox.Name = "physicsSettingsGroupBox";
             physicsSettingsGroupBox.Padding = new Padding(6, 0, 6, 0);
-            physicsSettingsGroupBox.Size = new Size(618, 194);
+            physicsSettingsGroupBox.Size = new Size(600, 194);
             physicsSettingsGroupBox.TabIndex = 7;
             physicsSettingsGroupBox.TabStop = false;
             physicsSettingsGroupBox.Text = "Physics Settings";
@@ -5583,7 +6749,7 @@
             skyColorGroupBox.Location = new Point(10, 10);
             skyColorGroupBox.Name = "skyColorGroupBox";
             skyColorGroupBox.Padding = new Padding(6, 0, 6, 0);
-            skyColorGroupBox.Size = new Size(618, 178);
+            skyColorGroupBox.Size = new Size(600, 178);
             skyColorGroupBox.TabIndex = 1;
             skyColorGroupBox.TabStop = false;
             skyColorGroupBox.Text = "Sky (Clear) Color";
@@ -5778,29 +6944,16 @@
             skyColorSliderA.Value = 255;
             skyColorSliderA.Scroll += skyColorSliderA_Scroll;
             // 
-            // miscPage
-            // 
-            miscPage.Controls.Add(miscExtraGroupBox);
-            miscPage.Controls.Add(characterOutlineGroupBox);
-            miscPage.Controls.Add(lightMapColorGroupBox);
-            miscPage.Location = new Point(4, 24);
-            miscPage.Name = "miscPage";
-            miscPage.Padding = new Padding(3);
-            miscPage.Size = new Size(636, 667);
-            miscPage.TabIndex = 7;
-            miscPage.Text = "Misc";
-            miscPage.UseVisualStyleBackColor = true;
-            // 
             // miscExtraGroupBox
             // 
             miscExtraGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             miscExtraGroupBox.Controls.Add(miscExtraTable);
             miscExtraGroupBox.FlatStyle = FlatStyle.Flat;
             miscExtraGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            miscExtraGroupBox.Location = new Point(10, 368);
+            miscExtraGroupBox.Location = new Point(10, 752);
             miscExtraGroupBox.Name = "miscExtraGroupBox";
             miscExtraGroupBox.Padding = new Padding(6, 0, 6, 0);
-            miscExtraGroupBox.Size = new Size(618, 188);
+            miscExtraGroupBox.Size = new Size(600, 161);
             miscExtraGroupBox.TabIndex = 9;
             miscExtraGroupBox.TabStop = false;
             miscExtraGroupBox.Text = "Extra/Unknown Settings";
@@ -5813,6 +6966,8 @@
             miscExtraTable.ColumnStyles.Add(new ColumnStyle());
             miscExtraTable.ColumnStyles.Add(new ColumnStyle());
             miscExtraTable.ColumnStyles.Add(new ColumnStyle());
+            miscExtraTable.Controls.Add(miscUnkValueField251, 1, 3);
+            miscExtraTable.Controls.Add(miscUnkLabelField251, 0, 3);
             miscExtraTable.Controls.Add(miscUnkValueField1F8, 3, 2);
             miscExtraTable.Controls.Add(miscUnkValueField1F7, 3, 1);
             miscExtraTable.Controls.Add(miscUnkValueField284, 1, 2);
@@ -5827,15 +6982,61 @@
             miscExtraTable.Controls.Add(miscUnkLabelField1F6, 2, 0);
             miscExtraTable.Controls.Add(miscUnkValueField1F6, 3, 0);
             miscExtraTable.Controls.Add(miscUnkValueField1F9, 3, 3);
-            miscExtraTable.Location = new Point(111, 35);
+            miscExtraTable.Location = new Point(95, 25);
             miscExtraTable.Name = "miscExtraTable";
             miscExtraTable.RowCount = 4;
             miscExtraTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             miscExtraTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             miscExtraTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             miscExtraTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            miscExtraTable.Size = new Size(382, 119);
+            miscExtraTable.Size = new Size(398, 119);
             miscExtraTable.TabIndex = 4;
+            // 
+            // miscUnkValueField251
+            // 
+            miscUnkValueField251.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            miscUnkValueField251.AutoSize = true;
+            miscUnkValueField251.Location = new Point(135, 93);
+            miscUnkValueField251.Margin = new Padding(6, 3, 6, 3);
+            miscUnkValueField251.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            miscUnkValueField251.Name = "miscUnkValueField251";
+            miscUnkValueField251.Size = new Size(68, 23);
+            miscUnkValueField251.TabIndex = 52;
+            // 
+            // miscUnkLabelField251
+            // 
+            miscUnkLabelField251.Anchor = AnchorStyles.Right;
+            miscUnkLabelField251.AutoSize = true;
+            miscUnkLabelField251.Location = new Point(3, 97);
+            miscUnkLabelField251.Name = "miscUnkLabelField251";
+            miscUnkLabelField251.Size = new Size(123, 15);
+            miscUnkLabelField251.TabIndex = 51;
+            miscUnkLabelField251.Text = "Field251 (Royal Only)";
+            miscUnkLabelField251.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // miscUnkValueField1F8
+            // 
+            miscUnkValueField1F8.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            miscUnkValueField1F8.AutoSize = true;
+            miscUnkValueField1F8.Location = new Point(325, 63);
+            miscUnkValueField1F8.Margin = new Padding(6, 3, 6, 3);
+            miscUnkValueField1F8.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            miscUnkValueField1F8.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
+            miscUnkValueField1F8.Name = "miscUnkValueField1F8";
+            miscUnkValueField1F8.Size = new Size(67, 23);
+            miscUnkValueField1F8.TabIndex = 49;
+            // 
+            // miscUnkValueField1F7
+            // 
+            miscUnkValueField1F7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            miscUnkValueField1F7.AutoSize = true;
+            miscUnkValueField1F7.Location = new Point(325, 33);
+            miscUnkValueField1F7.Margin = new Padding(6, 3, 6, 3);
+            miscUnkValueField1F7.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            miscUnkValueField1F7.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
+            miscUnkValueField1F7.Name = "miscUnkValueField1F7";
+            miscUnkValueField1F7.Size = new Size(67, 23);
+            miscUnkValueField1F7.TabIndex = 48;
             // 
             // miscUnkValueField284
             // 
@@ -5843,7 +7044,7 @@
             miscUnkValueField284.AutoSize = true;
             miscUnkValueField284.DecimalPlaces = 2;
             miscUnkValueField284.Increment = new decimal(new int[] { 5, 0, 0, 131072 });
-            miscUnkValueField284.Location = new Point(118, 63);
+            miscUnkValueField284.Location = new Point(135, 63);
             miscUnkValueField284.Margin = new Padding(6, 3, 6, 3);
             miscUnkValueField284.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             miscUnkValueField284.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
@@ -5855,7 +7056,7 @@
             // 
             miscUnkLabelField284.Anchor = AnchorStyles.Right;
             miscUnkLabelField284.AutoSize = true;
-            miscUnkLabelField284.Location = new Point(55, 67);
+            miscUnkLabelField284.Location = new Point(72, 67);
             miscUnkLabelField284.Name = "miscUnkLabelField284";
             miscUnkLabelField284.Size = new Size(54, 15);
             miscUnkLabelField284.TabIndex = 41;
@@ -5866,7 +7067,7 @@
             // 
             miscUnkLabelField27A.Anchor = AnchorStyles.Right;
             miscUnkLabelField27A.AutoSize = true;
-            miscUnkLabelField27A.Location = new Point(54, 37);
+            miscUnkLabelField27A.Location = new Point(71, 37);
             miscUnkLabelField27A.Name = "miscUnkLabelField27A";
             miscUnkLabelField27A.Size = new Size(55, 15);
             miscUnkLabelField27A.TabIndex = 40;
@@ -5879,7 +7080,7 @@
             refHeightValue.AutoSize = true;
             refHeightValue.DecimalPlaces = 2;
             refHeightValue.Increment = new decimal(new int[] { 5, 0, 0, 131072 });
-            refHeightValue.Location = new Point(118, 3);
+            refHeightValue.Location = new Point(135, 3);
             refHeightValue.Margin = new Padding(6, 3, 6, 3);
             refHeightValue.Maximum = new decimal(new int[] { 2000, 0, 0, 0 });
             refHeightValue.Minimum = new decimal(new int[] { 2000, 0, 0, int.MinValue });
@@ -5893,7 +7094,7 @@
             miscUnkValueField27A.AutoSize = true;
             miscUnkValueField27A.DecimalPlaces = 2;
             miscUnkValueField27A.Increment = new decimal(new int[] { 5, 0, 0, 131072 });
-            miscUnkValueField27A.Location = new Point(118, 33);
+            miscUnkValueField27A.Location = new Point(135, 33);
             miscUnkValueField27A.Margin = new Padding(6, 3, 6, 3);
             miscUnkValueField27A.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             miscUnkValueField27A.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
@@ -5905,7 +7106,7 @@
             // 
             refHeightLabel.Anchor = AnchorStyles.Right;
             refHeightLabel.AutoSize = true;
-            refHeightLabel.Location = new Point(3, 7);
+            refHeightLabel.Location = new Point(20, 7);
             refHeightLabel.Name = "refHeightLabel";
             refHeightLabel.Size = new Size(106, 15);
             refHeightLabel.TabIndex = 29;
@@ -5916,7 +7117,7 @@
             // 
             miscUnkLabelField1F9.Anchor = AnchorStyles.Right;
             miscUnkLabelField1F9.AutoSize = true;
-            miscUnkLabelField1F9.Location = new Point(246, 97);
+            miscUnkLabelField1F9.Location = new Point(263, 97);
             miscUnkLabelField1F9.Name = "miscUnkLabelField1F9";
             miscUnkLabelField1F9.Size = new Size(53, 15);
             miscUnkLabelField1F9.TabIndex = 47;
@@ -5927,7 +7128,7 @@
             // 
             miscUnkLabelField1F8.Anchor = AnchorStyles.Right;
             miscUnkLabelField1F8.AutoSize = true;
-            miscUnkLabelField1F8.Location = new Point(246, 67);
+            miscUnkLabelField1F8.Location = new Point(263, 67);
             miscUnkLabelField1F8.Name = "miscUnkLabelField1F8";
             miscUnkLabelField1F8.Size = new Size(53, 15);
             miscUnkLabelField1F8.TabIndex = 46;
@@ -5938,7 +7139,7 @@
             // 
             miscUnkLabelField1F7.Anchor = AnchorStyles.Right;
             miscUnkLabelField1F7.AutoSize = true;
-            miscUnkLabelField1F7.Location = new Point(195, 37);
+            miscUnkLabelField1F7.Location = new Point(212, 37);
             miscUnkLabelField1F7.Name = "miscUnkLabelField1F7";
             miscUnkLabelField1F7.Size = new Size(104, 15);
             miscUnkLabelField1F7.TabIndex = 45;
@@ -5949,7 +7150,7 @@
             // 
             miscUnkLabelField1F6.Anchor = AnchorStyles.Right;
             miscUnkLabelField1F6.AutoSize = true;
-            miscUnkLabelField1F6.Location = new Point(246, 7);
+            miscUnkLabelField1F6.Location = new Point(263, 7);
             miscUnkLabelField1F6.Name = "miscUnkLabelField1F6";
             miscUnkLabelField1F6.Size = new Size(53, 15);
             miscUnkLabelField1F6.TabIndex = 43;
@@ -5960,13 +7161,25 @@
             // 
             miscUnkValueField1F6.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             miscUnkValueField1F6.AutoSize = true;
-            miscUnkValueField1F6.Location = new Point(308, 3);
+            miscUnkValueField1F6.Location = new Point(325, 3);
             miscUnkValueField1F6.Margin = new Padding(6, 3, 6, 3);
             miscUnkValueField1F6.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             miscUnkValueField1F6.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
             miscUnkValueField1F6.Name = "miscUnkValueField1F6";
-            miscUnkValueField1F6.Size = new Size(68, 23);
+            miscUnkValueField1F6.Size = new Size(67, 23);
             miscUnkValueField1F6.TabIndex = 44;
+            // 
+            // miscUnkValueField1F9
+            // 
+            miscUnkValueField1F9.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            miscUnkValueField1F9.AutoSize = true;
+            miscUnkValueField1F9.Location = new Point(325, 93);
+            miscUnkValueField1F9.Margin = new Padding(6, 3, 6, 3);
+            miscUnkValueField1F9.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            miscUnkValueField1F9.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
+            miscUnkValueField1F9.Name = "miscUnkValueField1F9";
+            miscUnkValueField1F9.Size = new Size(67, 23);
+            miscUnkValueField1F9.TabIndex = 50;
             // 
             // characterOutlineGroupBox
             // 
@@ -5974,10 +7187,10 @@
             characterOutlineGroupBox.Controls.Add(characterOutlineTable);
             characterOutlineGroupBox.FlatStyle = FlatStyle.Flat;
             characterOutlineGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            characterOutlineGroupBox.Location = new Point(10, 194);
+            characterOutlineGroupBox.Location = new Point(10, 578);
             characterOutlineGroupBox.Name = "characterOutlineGroupBox";
             characterOutlineGroupBox.Padding = new Padding(6, 0, 6, 0);
-            characterOutlineGroupBox.Size = new Size(618, 168);
+            characterOutlineGroupBox.Size = new Size(600, 168);
             characterOutlineGroupBox.TabIndex = 8;
             characterOutlineGroupBox.TabStop = false;
             characterOutlineGroupBox.Text = "Character Outline Settings";
@@ -6155,10 +7368,10 @@
             lightMapColorGroupBox.Controls.Add(lightMapColorTable);
             lightMapColorGroupBox.FlatStyle = FlatStyle.Flat;
             lightMapColorGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lightMapColorGroupBox.Location = new Point(10, 10);
+            lightMapColorGroupBox.Location = new Point(10, 394);
             lightMapColorGroupBox.Name = "lightMapColorGroupBox";
             lightMapColorGroupBox.Padding = new Padding(6, 0, 6, 0);
-            lightMapColorGroupBox.Size = new Size(618, 178);
+            lightMapColorGroupBox.Size = new Size(600, 178);
             lightMapColorGroupBox.TabIndex = 2;
             lightMapColorGroupBox.TabStop = false;
             lightMapColorGroupBox.Text = "Light Map Color";
@@ -6357,7 +7570,7 @@
             // 
             statusStrip.BackColor = SystemColors.MenuBar;
             statusStrip.Items.AddRange(new ToolStripItem[] { envVerLabel, appVerLabel });
-            statusStrip.Location = new Point(0, 719);
+            statusStrip.Location = new Point(0, 724);
             statusStrip.Name = "statusStrip";
             statusStrip.RenderMode = ToolStripRenderMode.Professional;
             statusStrip.Size = new Size(644, 22);
@@ -6389,59 +7602,25 @@
             saveFileDialog.DefaultExt = "ENV";
             saveFileDialog.Filter = "ENV files (*.ENV)|*.ENV";
             // 
-            // miscUnkValueField1F7
-            // 
-            miscUnkValueField1F7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            miscUnkValueField1F7.AutoSize = true;
-            miscUnkValueField1F7.Location = new Point(308, 33);
-            miscUnkValueField1F7.Margin = new Padding(6, 3, 6, 3);
-            miscUnkValueField1F7.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            miscUnkValueField1F7.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
-            miscUnkValueField1F7.Name = "miscUnkValueField1F7";
-            miscUnkValueField1F7.Size = new Size(68, 23);
-            miscUnkValueField1F7.TabIndex = 48;
-            // 
-            // miscUnkValueField1F8
-            // 
-            miscUnkValueField1F8.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            miscUnkValueField1F8.AutoSize = true;
-            miscUnkValueField1F8.Location = new Point(308, 63);
-            miscUnkValueField1F8.Margin = new Padding(6, 3, 6, 3);
-            miscUnkValueField1F8.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            miscUnkValueField1F8.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
-            miscUnkValueField1F8.Name = "miscUnkValueField1F8";
-            miscUnkValueField1F8.Size = new Size(68, 23);
-            miscUnkValueField1F8.TabIndex = 49;
-            // 
-            // miscUnkValueField1F9
-            // 
-            miscUnkValueField1F9.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            miscUnkValueField1F9.AutoSize = true;
-            miscUnkValueField1F9.Location = new Point(308, 93);
-            miscUnkValueField1F9.Margin = new Padding(6, 3, 6, 3);
-            miscUnkValueField1F9.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            miscUnkValueField1F9.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
-            miscUnkValueField1F9.Name = "miscUnkValueField1F9";
-            miscUnkValueField1F9.Size = new Size(68, 23);
-            miscUnkValueField1F9.TabIndex = 50;
-            // 
             // MainWindow
             // 
             AllowDrop = true;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(644, 741);
+            ClientSize = new Size(644, 746);
             Controls.Add(envSectionTabs);
             Controls.Add(statusStrip);
             Controls.Add(topMenuStrip);
             Font = new Font("Segoe UI", 9F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = topMenuStrip;
             MaximizeBox = false;
-            MinimumSize = new Size(660, 780);
+            MinimumSize = new Size(660, 785);
             Name = "MainWindow";
             SizeGripStyle = SizeGripStyle.Hide;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "P5 ENV Editor";
             FormClosing += MainWindow_FormClosing;
             DragDrop += MainWindow_DragDrop;
@@ -6610,6 +7789,37 @@
             ((System.ComponentModel.ISupportInitialize)fogColorSliderB).EndInit();
             ((System.ComponentModel.ISupportInitialize)fogColorSliderO).EndInit();
             lightingPage.ResumeLayout(false);
+            royalLightingSettingsGroupBox.ResumeLayout(false);
+            royalLightingSettingsTable.ResumeLayout(false);
+            royalLightingSettingsTable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField1D0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bloomAmountValue).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bloomDetailValue).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bloomWhiteLevelValue).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bloomDarkLevelValue).EndInit();
+            ((System.ComponentModel.ISupportInitialize)glareSensitivityValue).EndInit();
+            ((System.ComponentModel.ISupportInitialize)sceneWhiteLevelValue).EndInit();
+            ((System.ComponentModel.ISupportInitialize)sceneDarkLevelValue).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField1F0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField1F4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField1F8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField1FC).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField200).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField204).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField208).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField20C).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField210).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField214).EndInit();
+            ((System.ComponentModel.ISupportInitialize)redColorBoostValue).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField224).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField228).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField22C).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField230).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField234).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField238).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lightingUnkValueField23C).EndInit();
+            ((System.ComponentModel.ISupportInitialize)greenColorBoostValue).EndInit();
+            ((System.ComponentModel.ISupportInitialize)blueColorBoostValue).EndInit();
             bloomSettingsGroupBox.ResumeLayout(false);
             bloomSettingsTable.ResumeLayout(false);
             bloomSettingsTable.PerformLayout();
@@ -6647,6 +7857,17 @@
             lightingSettingsTable.ResumeLayout(false);
             lightingSettingsTable.PerformLayout();
             fieldShadowTab.ResumeLayout(false);
+            shadowColorGroupBox.ResumeLayout(false);
+            shadowColorTable.ResumeLayout(false);
+            shadowColorTable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)shadowColorValueB).EndInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorSliderR).EndInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorValueG).EndInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorValueR).EndInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorValueA).EndInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorSliderG).EndInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorSliderB).EndInit();
+            ((System.ComponentModel.ISupportInitialize)shadowColorSliderA).EndInit();
             shadowUnkSettingsGroupBox.ResumeLayout(false);
             shadowUnkSettingsTable.ResumeLayout(false);
             shadowUnkSettingsTable.PerformLayout();
@@ -6677,7 +7898,7 @@
             ((System.ComponentModel.ISupportInitialize)dofNearBlurPlaneValue).EndInit();
             ((System.ComponentModel.ISupportInitialize)dofFarBlurPlaneValue).EndInit();
             ((System.ComponentModel.ISupportInitialize)dofFarBlurLimitValue).EndInit();
-            skyPhysicsPage.ResumeLayout(false);
+            miscPage.ResumeLayout(false);
             physicsSettingsGroupBox.ResumeLayout(false);
             physicsSettingsTable.ResumeLayout(false);
             physicsSettingsTable.PerformLayout();
@@ -6700,14 +7921,17 @@
             ((System.ComponentModel.ISupportInitialize)skyColorSliderG).EndInit();
             ((System.ComponentModel.ISupportInitialize)skyColorSliderB).EndInit();
             ((System.ComponentModel.ISupportInitialize)skyColorSliderA).EndInit();
-            miscPage.ResumeLayout(false);
             miscExtraGroupBox.ResumeLayout(false);
             miscExtraTable.ResumeLayout(false);
             miscExtraTable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)miscUnkValueField251).EndInit();
+            ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F7).EndInit();
             ((System.ComponentModel.ISupportInitialize)miscUnkValueField284).EndInit();
             ((System.ComponentModel.ISupportInitialize)refHeightValue).EndInit();
             ((System.ComponentModel.ISupportInitialize)miscUnkValueField27A).EndInit();
             ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F9).EndInit();
             characterOutlineGroupBox.ResumeLayout(false);
             characterOutlineTable.ResumeLayout(false);
             characterOutlineTable.PerformLayout();
@@ -6729,9 +7953,6 @@
             ((System.ComponentModel.ISupportInitialize)lightMapColorSliderA).EndInit();
             statusStrip.ResumeLayout(false);
             statusStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)miscUnkValueField1F9).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -7033,7 +8254,6 @@
         private NumericUpDown dofFarBlurLimitValue;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private TabPage fieldShadowTab;
-        private TabPage physicsPage;
         private GroupBox shadowSettingsGroupBox;
         private TableLayoutPanel shadowSettingsTable;
         private Label shadowDiffBrightnessLabel;
@@ -7087,7 +8307,7 @@
         private NumericUpDown colorCorrectionValueM;
         private NumericUpDown colorCorrectionValueBurn;
         private TabPage miscPage;
-        private TabPage skyPhysicsPage;
+        private TabPage physicsPage;
         private GroupBox skyColorGroupBox;
         private Panel skyColorSwatch;
         private TableLayoutPanel skyColorTable;
@@ -7170,5 +8390,88 @@
         private NumericUpDown miscUnkValueField1F8;
         private NumericUpDown miscUnkValueField1F7;
         private NumericUpDown miscUnkValueField1F9;
+        private GroupBox shadowColorGroupBox;
+        private Panel shadowColorSwatch;
+        private TableLayoutPanel shadowColorTable;
+        private NumericUpDown shadowColorValueB;
+        private TrackBar shadowColorSliderR;
+        private NumericUpDown shadowColorValueG;
+        private Label shadowColorLabelB;
+        private Label shadowColorLabelG;
+        private Label shadowColorLabelR;
+        public NumericUpDown shadowColorValueR;
+        private Label shadowColorLabelA;
+        private NumericUpDown shadowColorValueA;
+        private TrackBar shadowColorSliderG;
+        private TrackBar shadowColorSliderB;
+        private TrackBar shadowColorSliderA;
+        private GroupBox royalLightingSettingsGroupBox;
+        private TableLayoutPanel royalLightingSettingsTable;
+        private Label lightingUnkLabelField1CD;
+        private Label lightingUnkLabelField1CC;
+        private Label lightingUnkLabelField200;
+        private Label lightingUnkLabelField204;
+        private Label lightingUnkLabelField1CE;
+        private Label lightingUnkLabelField1CF;
+        private Label lightingUnkLabelField1D0;
+        private Label bloomAmountLabel;
+        private Label lightingUnkLabelField23C;
+        private Label lightingUnkLabelField1FC;
+        private Label lightingUnkLabelField238;
+        private Label lightingUnkLabelField1F8;
+        private Label lightingUnkLabelField234;
+        private Label lightingUnkLabelField1F4;
+        private Label lightingUnkLabelField230;
+        private Label lightingUnkLabelField1F0;
+        private Label lightingUnkLabelField22C;
+        private Label sceneDarkLevelLabel;
+        private Label lightingUnkLabelField228;
+        private Label sceneWhiteLevelLabel;
+        private Label lightingUnkLabelField224;
+        private Label glareSensitivityLabel;
+        private Label greenColorBoostLabel;
+        private Label bloomDarkLevelLabel;
+        private Label blueColorBoostLabel;
+        private Label bloomWhiteLevelLabel;
+        private Label redColorBoostLabel;
+        private Label bloomDetailLabel;
+        private Label lightingUnkLabelField214;
+        private Label lightingUnkLabelField210;
+        private Label lightingUnkLabelField20C;
+        private Label lightingUnkLabelField208;
+        private CheckBox lightingUnkBoxField1CC;
+        private NumericUpDown lightingUnkValueField1D0;
+        private NumericUpDown bloomAmountValue;
+        private NumericUpDown bloomDetailValue;
+        private NumericUpDown bloomWhiteLevelValue;
+        private NumericUpDown bloomDarkLevelValue;
+        private NumericUpDown glareSensitivityValue;
+        private NumericUpDown sceneWhiteLevelValue;
+        private NumericUpDown sceneDarkLevelValue;
+        private NumericUpDown lightingUnkValueField1F0;
+        private NumericUpDown lightingUnkValueField1F4;
+        private NumericUpDown lightingUnkValueField1F8;
+        private NumericUpDown lightingUnkValueField1FC;
+        private CheckBox lightingUnkBoxField1CD;
+        private CheckBox lightingUnkBoxField1CE;
+        private CheckBox lightingUnkBoxField1CF;
+        private NumericUpDown lightingUnkValueField200;
+        private NumericUpDown lightingUnkValueField204;
+        private NumericUpDown lightingUnkValueField208;
+        private NumericUpDown lightingUnkValueField20C;
+        private NumericUpDown lightingUnkValueField210;
+        private NumericUpDown lightingUnkValueField214;
+        private NumericUpDown redColorBoostValue;
+        private NumericUpDown blueColorBoostValue;
+        private NumericUpDown greenColorBoostValue;
+        private NumericUpDown lightingUnkValueField224;
+        private NumericUpDown lightingUnkValueField228;
+        private NumericUpDown lightingUnkValueField22C;
+        private NumericUpDown lightingUnkValueField230;
+        private NumericUpDown lightingUnkValueField234;
+        private NumericUpDown lightingUnkValueField238;
+        private NumericUpDown lightingUnkValueField23C;
+        private NumericUpDown miscUnkValueField251;
+        private Label miscUnkLabelField251;
     }
 }

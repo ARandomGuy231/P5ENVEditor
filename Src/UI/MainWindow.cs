@@ -35,7 +35,7 @@ namespace P5ENVEditor
 
             try //update UI info
             {
-                if (EnvFunctions.loadedENVHeader.gfsVersion is not 0x1105050 and not 0x1105060 and not 0x1105070)
+                if (EnvFunctions.partiallySupportedEnvVersions.Contains(EnvFunctions.loadedENVHeader.gfsVersion))
                 {
                     string message = "You have loaded a partially supported ENV version, some parameters may appear disabled, empty or incorrect. " +
                         "See the table on the GitHub page for more information.";
@@ -119,7 +119,8 @@ namespace P5ENVEditor
         private void UpdateENVInformation() //updates window title and ENV version label
         {
             UpdateWindowTitle();
-            envVerLabel.Text = $"ENV Version: 0x{EnvFunctions.loadedENVHeader.gfsVersion:X}";
+            string gameVersion = EnvFunctions.loadedENVHeader.gfsVersion > 0x1105070 ? "Royal" : "Vanilla";
+            envVerLabel.Text = $"ENV Version: 0x{EnvFunctions.loadedENVHeader.gfsVersion:X} ({gameVersion})";
         }
 
         private void UpdateWindowTitle()
@@ -172,6 +173,8 @@ namespace P5ENVEditor
         private static float CheckNumberBox(NumericUpDown box, float originalValue) => box.Enabled ? (float)box.Value : originalValue;
         private static uint CheckNumberBox(NumericUpDown box, uint originalValue) => box.Enabled ? (uint)box.Value : originalValue;
         private static byte CheckNumberBox(NumericUpDown box, byte originalValue) => box.Enabled ? (byte)box.Value : originalValue;
+
+        private static byte CheckToggleBox(CheckBox box, byte originalValue) => box.Enabled ? (byte)box.CheckState : originalValue;
 
         private static void DisableNumberBox(NumericUpDown box)
         {
