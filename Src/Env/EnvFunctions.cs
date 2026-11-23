@@ -22,7 +22,7 @@ namespace P5ENVEditor.Env
             0x1105010, //17846288 (env0001_006_000 uses it, 10 files use it, 672 bytes)
             0x1105000, //17846272 (env0002_001_000 uses it, 28 files use it, 668 bytes)
             0x1104990, //17844624 (env0012_002_000, only file that uses it, 668 bytes)
-            0x1104970, //17844592 (env0153_010_000 uses it, 5 files use it, 668 bytes) Field1F6 doesn't save back properly for some reason
+            0x1104970, //17844592 (env0153_010_000 uses it, 5 files use it, 668 bytes)
             0x1104960, //17844576 (env0002_008_030 uses it, only file that uses it, 664 bytes)
             0x1104950, //17844560 (env0221_001_000 uses it, only file that uses it, 664 bytes)
             0x1104940, //17844544 (env0001_101_000 uses it, 2 files use it, 664 bytes)

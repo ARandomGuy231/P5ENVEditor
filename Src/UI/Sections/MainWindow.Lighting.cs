@@ -119,7 +119,7 @@ namespace P5ENVEditor
             newLightingSection.field1F0 = CheckNumberBox(lightingUnkValueField1F0, newLightingSection.field1F0);
             newLightingSection.field1F4 = CheckNumberBox(lightingUnkValueField1F4, newLightingSection.field1F4);
             newLightingSection.field1F8 = CheckNumberBox(lightingUnkValueField1F8, newLightingSection.field1F8);
-            newLightingSection.field1F4 = CheckNumberBox(lightingUnkValueField1FC, newLightingSection.field1FC);
+            newLightingSection.field1FC = CheckNumberBox(lightingUnkValueField1FC, newLightingSection.field1FC);
             newLightingSection.field200 = CheckNumberBox(lightingUnkValueField200, newLightingSection.field200);
             newLightingSection.field204 = CheckNumberBox(lightingUnkValueField204, newLightingSection.field204);
             newLightingSection.field208 = CheckNumberBox(lightingUnkValueField208, newLightingSection.field208);
