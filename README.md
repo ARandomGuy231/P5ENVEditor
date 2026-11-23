@@ -15,13 +15,12 @@ This program requires you have [.NET Desktop Runtime 10](https://dotnet.microsof
 When encountering bugs or issues, please include the ENV file you were trying to edit and the log files found in the same folder as the editor, this helps massively when looking into issues.
 
 ## Planned Features
-- Royal ENV support.
 - Live ENV editing. Allowing you to use the editor to make changes and see them in-game in real time, RPCS3 only for now.
 
 ## Supported ENV Versions
 A table of supported and unsupported ENV versions, you can check your ENV version by loading the file in the editor and looking at the version label on the bottom left. If you get an unsupported version error on a file that should be supported, please make a new issue so I can look into it.
 | Key | Status | Description |
-| :---: | :---: | :--- |
+| :---: | :---: | --- |
 |✅| Full Support | Can safely and reliably load and save. |
 |🟡| Partial Support | Can load but may have disabled or incorrect values in the editor, may not save correctly. The editor will warn you when a partially supported version is loaded. |
 |❌| No Support | Cannot load or save. The editor will tell you when an unsupported version is loaded. |
@@ -31,7 +30,9 @@ A table of supported and unsupported ENV versions, you can check your ENV versio
 | Below 0x1104900 | ❌ | Persona 5 | Not many files use versions below this and will not be supported. |
 | 0x1104900 to 0x1105040 | 🟡 | Persona 5 | A handful of files use these versions. They will load but may have incorrect values, please report any issues. |
 | 0x1105050 to 0x1105070 | ✅ | Persona 5 | Most commonly used versions in the game, all files using these versions are fully supported. |
-| Above 0x1105070 | ❌ | Persona 5 Royal | Files from Royal are not supported, but will come later. |
+| 0x1105080 | ❌ | Persona 5 Royal | An undocumented version found in 31 files. Support will not be added unless it becomes documented. |
+| 0x1105090 | ❌ | Persona 5 Royal | Support could be added but due to the amount of differences and the fact that only 16 files use this version it isn't planned.  |
+| 0x1105100 | ✅ | Persona 5 Royal | Majority of the files in Royal use this version, it is fully supported in v1.1.0 and above. |
 
 ## Special Thanks
 - [TGE](https://github.com/tge-was-taken), [Lyn](https://github.com/lyncpk), Sierra and [SecreC](https://github.com/Secre-C) for their work on the [010 Editor template](https://github.com/tge-was-taken/010-Editor-Templates/blob/master/templates/p5_env.bt), which was used as a base for paramater names, types, locations and more.
