@@ -101,6 +101,26 @@ namespace P5ENVEditor
             charEmissiveSwatch.BackColor = Color.FromArgb((int)charEmissiveValueR.Value, (int)charEmissiveValueG.Value, (int)charEmissiveValueB.Value);
         }
 
+        private void UpdateCharAmbHex()
+        {
+            charAmbColorHex.Text = $"#{charAmbSwatch.BackColor.R:X2}{charAmbSwatch.BackColor.G:X2}{charAmbSwatch.BackColor.B:X2}";
+        }
+
+        private void UpdateCharDiffHex()
+        {
+            charDiffColorHex.Text = $"#{charDiffSwatch.BackColor.R:X2}{charDiffSwatch.BackColor.G:X2}{charDiffSwatch.BackColor.B:X2}";
+        }
+
+        private void UpdateCharSpecHex()
+        {
+            charSpecColorHex.Text = $"#{charSpecSwatch.BackColor.R:X2}{charSpecSwatch.BackColor.G:X2}{charSpecSwatch.BackColor.B:X2}";
+        }
+
+        private void UpdateCharEmissiveHex()
+        {
+            charEmissiveColorHex.Text = $"#{charEmissiveSwatch.BackColor.R:X2}{charEmissiveSwatch.BackColor.G:X2}{charEmissiveSwatch.BackColor.B:X2}";
+        }
+
         private void charAmbSliderR_Scroll(object sender, EventArgs e)
         {
             charAmbValueR.Value = charAmbSliderR.Value;
@@ -110,6 +130,7 @@ namespace P5ENVEditor
         {
             charAmbSliderR.Value = (int)charAmbValueR.Value;
             UpdateCharAmbSwatch();
+            UpdateCharAmbHex();
         }
 
         private void charAmbSliderG_Scroll(object sender, EventArgs e)
@@ -121,6 +142,7 @@ namespace P5ENVEditor
         {
             charAmbSliderG.Value = (int)charAmbValueG.Value;
             UpdateCharAmbSwatch();
+            UpdateCharAmbHex();
         }
 
         private void charAmbSliderB_Scroll(object sender, EventArgs e)
@@ -132,6 +154,7 @@ namespace P5ENVEditor
         {
             charAmbSliderB.Value = (int)charAmbValueB.Value;
             UpdateCharAmbSwatch();
+            UpdateCharAmbHex();
         }
 
         private void charAmbSliderA_Scroll(object sender, EventArgs e)
@@ -153,6 +176,7 @@ namespace P5ENVEditor
         {
             charDiffSliderR.Value = (int)charDiffValueR.Value;
             UpdateCharDiffSwatch();
+            UpdateCharDiffHex();
         }
 
         private void charDiffSliderG_Scroll(object sender, EventArgs e)
@@ -164,6 +188,7 @@ namespace P5ENVEditor
         {
             charDiffSliderG.Value = (int)charDiffValueG.Value;
             UpdateCharDiffSwatch();
+            UpdateCharDiffHex();
         }
 
         private void charDiffSliderB_Scroll(object sender, EventArgs e)
@@ -175,6 +200,7 @@ namespace P5ENVEditor
         {
             charDiffSliderB.Value = (int)charDiffValueB.Value;
             UpdateCharDiffSwatch();
+            UpdateCharDiffHex();
         }
 
         private void charDiffSliderA_Scroll(object sender, EventArgs e)
@@ -196,6 +222,7 @@ namespace P5ENVEditor
         {
             charSpecSliderR.Value = (int)charSpecValueR.Value;
             UpdateCharSpecSwatch();
+            UpdateCharSpecHex();
         }
 
         private void charSpecSliderG_Scroll(object sender, EventArgs e)
@@ -207,6 +234,7 @@ namespace P5ENVEditor
         {
             charSpecSliderG.Value = (int)charSpecValueG.Value;
             UpdateCharSpecSwatch();
+            UpdateCharSpecHex();
         }
 
         private void charSpecSliderB_Scroll(object sender, EventArgs e)
@@ -218,6 +246,7 @@ namespace P5ENVEditor
         {
             charSpecSliderB.Value = (int)charSpecValueB.Value;
             UpdateCharSpecSwatch();
+            UpdateCharSpecHex();
         }
 
         private void charSpecSliderA_Scroll(object sender, EventArgs e)
@@ -239,6 +268,7 @@ namespace P5ENVEditor
         {
             charEmissiveSliderR.Value = (int)charEmissiveValueR.Value;
             UpdateCharEmissiveSwatch();
+            UpdateCharEmissiveHex();
         }
 
         private void charEmissiveSliderG_Scroll(object sender, EventArgs e)
@@ -250,6 +280,7 @@ namespace P5ENVEditor
         {
             charEmissiveSliderG.Value = (int)charEmissiveValueG.Value;
             UpdateCharEmissiveSwatch();
+            UpdateCharEmissiveHex();
         }
 
         private void charEmissiveSliderB_Scroll(object sender, EventArgs e)
@@ -261,6 +292,7 @@ namespace P5ENVEditor
         {
             charEmissiveSliderB.Value = (int)charEmissiveValueB.Value;
             UpdateCharEmissiveSwatch();
+            UpdateCharEmissiveHex();
         }
 
         private void charEmissiveSliderA_Scroll(object sender, EventArgs e)
@@ -271,6 +303,26 @@ namespace P5ENVEditor
         private void charEmissiveValueA_ValueChanged(object sender, EventArgs e)
         {
             charEmissiveSliderA.Value = (int)charEmissiveValueA.Value;
+        }
+
+        private void charAmbColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(charAmbColorHex, charAmbValueR, charAmbValueG, charAmbValueB);
+        }
+
+        private void charDiffColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(charDiffColorHex, charDiffValueR, charDiffValueG, charDiffValueB);
+        }
+
+        private void charSpecColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(charSpecColorHex, charSpecValueR, charSpecValueG, charSpecValueB);
+        }
+
+        private void charEmissiveColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(charEmissiveColorHex, charEmissiveValueR, charEmissiveValueG, charEmissiveValueB);
         }
     }
 }

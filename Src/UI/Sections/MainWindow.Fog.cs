@@ -69,6 +69,16 @@ namespace P5ENVEditor
             floorFogColorSwatch.BackColor = Color.FromArgb((int)floorFogColorValueR.Value, (int)floorFogColorValueG.Value, (int)floorFogColorValueB.Value);
         }
 
+        private void UpdateFogHex()
+        {
+            fogColorHex.Text = $"#{fogColorSwatch.BackColor.R:X2}{fogColorSwatch.BackColor.G:X2}{fogColorSwatch.BackColor.B:X2}";
+        }
+
+        private void UpdateFloorFogHex()
+        {
+            floorFogColorHex.Text = $"#{floorFogColorSwatch.BackColor.R:X2}{floorFogColorSwatch.BackColor.G:X2}{floorFogColorSwatch.BackColor.B:X2}";
+        }
+
         private void fogColorSliderR_Scroll(object sender, EventArgs e)
         {
             fogColorValueR.Value = fogColorSliderR.Value;
@@ -78,6 +88,7 @@ namespace P5ENVEditor
         {
             fogColorSliderR.Value = (int)fogColorValueR.Value;
             UpdateFogSwatch();
+            UpdateFogHex();
         }
 
         private void fogColorSliderG_Scroll(object sender, EventArgs e)
@@ -89,6 +100,7 @@ namespace P5ENVEditor
         {
             fogColorSliderG.Value = (int)fogColorValueG.Value;
             UpdateFogSwatch();
+            UpdateFogHex();
         }
 
         private void fogColorSliderB_Scroll(object sender, EventArgs e)
@@ -100,6 +112,7 @@ namespace P5ENVEditor
         {
             fogColorSliderB.Value = (int)fogColorValueB.Value;
             UpdateFogSwatch();
+            UpdateFogHex();
         }
 
         private void fogColorSliderO_Scroll(object sender, EventArgs e)
@@ -121,6 +134,7 @@ namespace P5ENVEditor
         {
             floorFogColorSliderR.Value = (int)floorFogColorValueR.Value;
             UpdateFloorFogSwatch();
+            UpdateFloorFogHex();
         }
 
         private void floorFogColorSliderG_Scroll(object sender, EventArgs e)
@@ -132,6 +146,7 @@ namespace P5ENVEditor
         {
             floorFogColorSliderG.Value = (int)floorFogColorValueG.Value;
             UpdateFloorFogSwatch();
+            UpdateFloorFogHex();
         }
 
         private void floorFogColorSliderB_Scroll(object sender, EventArgs e)
@@ -143,6 +158,7 @@ namespace P5ENVEditor
         {
             floorFogColorSliderB.Value = (int)floorFogColorValueB.Value;
             UpdateFloorFogSwatch();
+            UpdateFloorFogHex();
         }
 
         private void floorFogColorSliderO_Scroll(object sender, EventArgs e)
@@ -153,6 +169,16 @@ namespace P5ENVEditor
         private void floorFogColorValueO_ValueChanged(object sender, EventArgs e)
         {
             floorFogColorSliderO.Value = (int)floorFogColorValueO.Value;
+        }
+
+        private void fogColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(fogColorHex, fogColorValueR, fogColorValueG, fogColorValueB);
+        }
+
+        private void floorFogColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(floorFogColorHex, floorFogColorValueR, floorFogColorValueG, floorFogColorValueB);
         }
     }
 }

@@ -57,6 +57,7 @@
             fldLightDirValueZ = new NumericUpDown();
             fldLightDirValueY = new NumericUpDown();
             fldEmissiveGroupBox = new GroupBox();
+            fldEmissiveColorHex = new TextBox();
             fldEmissiveSwatch = new Panel();
             fldEmissiveColorTable = new TableLayoutPanel();
             fldEmissiveValueB = new NumericUpDown();
@@ -72,6 +73,7 @@
             fldEmissiveValueR = new NumericUpDown();
             fldEmissiveSliderB = new TrackBar();
             fldSpecGroupBox = new GroupBox();
+            fldSpecColorHex = new TextBox();
             fldSpecSwatch = new Panel();
             fldSpecColorTable = new TableLayoutPanel();
             fldSpecValueB = new NumericUpDown();
@@ -87,6 +89,7 @@
             fldSpecSliderB = new TrackBar();
             fldSpecSliderA = new TrackBar();
             fldDiffGroupBox = new GroupBox();
+            fldDiffColorHex = new TextBox();
             fldDiffSwatch = new Panel();
             fldDiffColorTable = new TableLayoutPanel();
             fldDiffValueB = new NumericUpDown();
@@ -102,6 +105,7 @@
             fldDiffSliderB = new TrackBar();
             fldDiffSliderA = new TrackBar();
             fldAmbGroupBox = new GroupBox();
+            fldAmbColorHex = new TextBox();
             fldAmbSwatch = new Panel();
             fldAmbColorTable = new TableLayoutPanel();
             fldAmbValueB = new NumericUpDown();
@@ -144,6 +148,7 @@
             charLightDirValueZ = new NumericUpDown();
             charLightDirValueY = new NumericUpDown();
             charEmissiveGroupBox = new GroupBox();
+            charEmissiveColorHex = new TextBox();
             charEmissiveSwatch = new Panel();
             charEmissiveColorTable = new TableLayoutPanel();
             charEmissiveValueB = new NumericUpDown();
@@ -159,6 +164,7 @@
             charEmissiveValueR = new NumericUpDown();
             charEmissiveSliderB = new TrackBar();
             charSpecGroupBox = new GroupBox();
+            charSpecColorHex = new TextBox();
             charSpecSwatch = new Panel();
             charSpecColorTable = new TableLayoutPanel();
             charSpecValueB = new NumericUpDown();
@@ -174,6 +180,7 @@
             charSpecSliderB = new TrackBar();
             charSpecSliderA = new TrackBar();
             charDiffGroupBox = new GroupBox();
+            charDiffColorHex = new TextBox();
             charDiffSwatch = new Panel();
             charDiffColorTable = new TableLayoutPanel();
             charDiffValueB = new NumericUpDown();
@@ -189,6 +196,7 @@
             charDiffSliderB = new TrackBar();
             charDiffSliderA = new TrackBar();
             charAmbGroupBox = new GroupBox();
+            charAmbColorHex = new TextBox();
             charAmbSwatch = new Panel();
             charAmbColorTable = new TableLayoutPanel();
             charAmbValueB = new NumericUpDown();
@@ -205,6 +213,7 @@
             charAmbSliderA = new TrackBar();
             fogPage = new TabPage();
             floorFogColorGroupBox = new GroupBox();
+            floorFogColorHex = new TextBox();
             floorFogColorSwatch = new Panel();
             floorFogColorTable = new TableLayoutPanel();
             floorFogColorValueB = new NumericUpDown();
@@ -242,6 +251,7 @@
             fogStartDistanceLabel = new Label();
             enableAmbFogBox = new CheckBox();
             fogColorGroupBox = new GroupBox();
+            fogColorHex = new TextBox();
             fogColorSwatch = new Panel();
             fogColorTable = new TableLayoutPanel();
             fogColorValueB = new NumericUpDown();
@@ -383,6 +393,7 @@
             enableGraphicOutputLabel = new Label();
             fieldShadowTab = new TabPage();
             shadowColorGroupBox = new GroupBox();
+            shadowColorHex = new TextBox();
             shadowColorSwatch = new Panel();
             shadowColorTable = new TableLayoutPanel();
             shadowColorValueB = new NumericUpDown();
@@ -478,6 +489,7 @@
             windCycleDelayLabel = new Label();
             windStrengthValue = new NumericUpDown();
             skyColorGroupBox = new GroupBox();
+            skyColorHex = new TextBox();
             skyColorSwatch = new Panel();
             skyColorTable = new TableLayoutPanel();
             skyColorValueB = new NumericUpDown();
@@ -525,6 +537,7 @@
             characterOutlineStartValue = new NumericUpDown();
             characterOutlineEndValue = new NumericUpDown();
             lightMapColorGroupBox = new GroupBox();
+            lightMapColorHex = new TextBox();
             lightMapColorSwatch = new Panel();
             lightMapColorTable = new TableLayoutPanel();
             lightMapColorValueB = new NumericUpDown();
@@ -1168,6 +1181,7 @@
             // fldEmissiveGroupBox
             // 
             fldEmissiveGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            fldEmissiveGroupBox.Controls.Add(fldEmissiveColorHex);
             fldEmissiveGroupBox.Controls.Add(fldEmissiveSwatch);
             fldEmissiveGroupBox.Controls.Add(fldEmissiveColorTable);
             fldEmissiveGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -1179,11 +1193,23 @@
             fldEmissiveGroupBox.TabStop = false;
             fldEmissiveGroupBox.Text = "Field Emissive Color (Unused)";
             // 
+            // fldEmissiveColorHex
+            // 
+            fldEmissiveColorHex.BorderStyle = BorderStyle.FixedSingle;
+            fldEmissiveColorHex.Location = new Point(31, 130);
+            fldEmissiveColorHex.MaxLength = 7;
+            fldEmissiveColorHex.Name = "fldEmissiveColorHex";
+            fldEmissiveColorHex.Size = new Size(100, 23);
+            fldEmissiveColorHex.TabIndex = 5;
+            fldEmissiveColorHex.Text = "#000000";
+            fldEmissiveColorHex.TextAlign = HorizontalAlignment.Center;
+            fldEmissiveColorHex.TextChanged += fldEmissiveColorHex_TextChanged;
+            // 
             // fldEmissiveSwatch
             // 
             fldEmissiveSwatch.BackColor = Color.Black;
             fldEmissiveSwatch.BorderStyle = BorderStyle.FixedSingle;
-            fldEmissiveSwatch.Location = new Point(31, 41);
+            fldEmissiveSwatch.Location = new Point(31, 30);
             fldEmissiveSwatch.Margin = new Padding(25);
             fldEmissiveSwatch.MaximumSize = new Size(100, 100);
             fldEmissiveSwatch.MinimumSize = new Size(100, 100);
@@ -1372,6 +1398,7 @@
             // fldSpecGroupBox
             // 
             fldSpecGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            fldSpecGroupBox.Controls.Add(fldSpecColorHex);
             fldSpecGroupBox.Controls.Add(fldSpecSwatch);
             fldSpecGroupBox.Controls.Add(fldSpecColorTable);
             fldSpecGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -1383,11 +1410,23 @@
             fldSpecGroupBox.TabStop = false;
             fldSpecGroupBox.Text = "Field Specular Color";
             // 
+            // fldSpecColorHex
+            // 
+            fldSpecColorHex.BorderStyle = BorderStyle.FixedSingle;
+            fldSpecColorHex.Location = new Point(31, 130);
+            fldSpecColorHex.MaxLength = 7;
+            fldSpecColorHex.Name = "fldSpecColorHex";
+            fldSpecColorHex.Size = new Size(100, 23);
+            fldSpecColorHex.TabIndex = 4;
+            fldSpecColorHex.Text = "#000000";
+            fldSpecColorHex.TextAlign = HorizontalAlignment.Center;
+            fldSpecColorHex.TextChanged += fldSpecColorHex_TextChanged;
+            // 
             // fldSpecSwatch
             // 
             fldSpecSwatch.BackColor = Color.Black;
             fldSpecSwatch.BorderStyle = BorderStyle.FixedSingle;
-            fldSpecSwatch.Location = new Point(31, 41);
+            fldSpecSwatch.Location = new Point(31, 30);
             fldSpecSwatch.Margin = new Padding(25);
             fldSpecSwatch.MaximumSize = new Size(100, 100);
             fldSpecSwatch.MinimumSize = new Size(100, 100);
@@ -1576,6 +1615,7 @@
             // fldDiffGroupBox
             // 
             fldDiffGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            fldDiffGroupBox.Controls.Add(fldDiffColorHex);
             fldDiffGroupBox.Controls.Add(fldDiffSwatch);
             fldDiffGroupBox.Controls.Add(fldDiffColorTable);
             fldDiffGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -1587,11 +1627,23 @@
             fldDiffGroupBox.TabStop = false;
             fldDiffGroupBox.Text = "Field Diffuse Color";
             // 
+            // fldDiffColorHex
+            // 
+            fldDiffColorHex.BorderStyle = BorderStyle.FixedSingle;
+            fldDiffColorHex.Location = new Point(31, 130);
+            fldDiffColorHex.MaxLength = 7;
+            fldDiffColorHex.Name = "fldDiffColorHex";
+            fldDiffColorHex.Size = new Size(100, 23);
+            fldDiffColorHex.TabIndex = 3;
+            fldDiffColorHex.Text = "#000000";
+            fldDiffColorHex.TextAlign = HorizontalAlignment.Center;
+            fldDiffColorHex.TextChanged += fldDiffColorHex_TextChanged;
+            // 
             // fldDiffSwatch
             // 
             fldDiffSwatch.BackColor = Color.Black;
             fldDiffSwatch.BorderStyle = BorderStyle.FixedSingle;
-            fldDiffSwatch.Location = new Point(31, 41);
+            fldDiffSwatch.Location = new Point(31, 30);
             fldDiffSwatch.Margin = new Padding(25);
             fldDiffSwatch.MaximumSize = new Size(100, 100);
             fldDiffSwatch.MinimumSize = new Size(100, 100);
@@ -1780,6 +1832,7 @@
             // fldAmbGroupBox
             // 
             fldAmbGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            fldAmbGroupBox.Controls.Add(fldAmbColorHex);
             fldAmbGroupBox.Controls.Add(fldAmbSwatch);
             fldAmbGroupBox.Controls.Add(fldAmbColorTable);
             fldAmbGroupBox.Dock = DockStyle.Top;
@@ -1793,11 +1846,23 @@
             fldAmbGroupBox.TabStop = false;
             fldAmbGroupBox.Text = "Field Ambient Color";
             // 
+            // fldAmbColorHex
+            // 
+            fldAmbColorHex.BorderStyle = BorderStyle.FixedSingle;
+            fldAmbColorHex.Location = new Point(31, 130);
+            fldAmbColorHex.MaxLength = 7;
+            fldAmbColorHex.Name = "fldAmbColorHex";
+            fldAmbColorHex.Size = new Size(100, 23);
+            fldAmbColorHex.TabIndex = 2;
+            fldAmbColorHex.Text = "#000000";
+            fldAmbColorHex.TextAlign = HorizontalAlignment.Center;
+            fldAmbColorHex.TextChanged += fieldAmbColorHex_TextChanged;
+            // 
             // fldAmbSwatch
             // 
             fldAmbSwatch.BackColor = Color.Black;
             fldAmbSwatch.BorderStyle = BorderStyle.FixedSingle;
-            fldAmbSwatch.Location = new Point(31, 41);
+            fldAmbSwatch.Location = new Point(31, 30);
             fldAmbSwatch.Margin = new Padding(25);
             fldAmbSwatch.MaximumSize = new Size(100, 100);
             fldAmbSwatch.MinimumSize = new Size(100, 100);
@@ -2360,6 +2425,7 @@
             // charEmissiveGroupBox
             // 
             charEmissiveGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            charEmissiveGroupBox.Controls.Add(charEmissiveColorHex);
             charEmissiveGroupBox.Controls.Add(charEmissiveSwatch);
             charEmissiveGroupBox.Controls.Add(charEmissiveColorTable);
             charEmissiveGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -2371,11 +2437,23 @@
             charEmissiveGroupBox.TabStop = false;
             charEmissiveGroupBox.Text = "Character Emissive Color (Unused)";
             // 
+            // charEmissiveColorHex
+            // 
+            charEmissiveColorHex.BorderStyle = BorderStyle.FixedSingle;
+            charEmissiveColorHex.Location = new Point(31, 130);
+            charEmissiveColorHex.MaxLength = 7;
+            charEmissiveColorHex.Name = "charEmissiveColorHex";
+            charEmissiveColorHex.Size = new Size(100, 23);
+            charEmissiveColorHex.TabIndex = 6;
+            charEmissiveColorHex.Text = "#000000";
+            charEmissiveColorHex.TextAlign = HorizontalAlignment.Center;
+            charEmissiveColorHex.TextChanged += charEmissiveColorHex_TextChanged;
+            // 
             // charEmissiveSwatch
             // 
             charEmissiveSwatch.BackColor = Color.Black;
             charEmissiveSwatch.BorderStyle = BorderStyle.FixedSingle;
-            charEmissiveSwatch.Location = new Point(31, 41);
+            charEmissiveSwatch.Location = new Point(31, 30);
             charEmissiveSwatch.Margin = new Padding(25);
             charEmissiveSwatch.MaximumSize = new Size(100, 100);
             charEmissiveSwatch.MinimumSize = new Size(100, 100);
@@ -2564,6 +2642,7 @@
             // charSpecGroupBox
             // 
             charSpecGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            charSpecGroupBox.Controls.Add(charSpecColorHex);
             charSpecGroupBox.Controls.Add(charSpecSwatch);
             charSpecGroupBox.Controls.Add(charSpecColorTable);
             charSpecGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -2575,11 +2654,23 @@
             charSpecGroupBox.TabStop = false;
             charSpecGroupBox.Text = "Character Specular Color";
             // 
+            // charSpecColorHex
+            // 
+            charSpecColorHex.BorderStyle = BorderStyle.FixedSingle;
+            charSpecColorHex.Location = new Point(31, 130);
+            charSpecColorHex.MaxLength = 7;
+            charSpecColorHex.Name = "charSpecColorHex";
+            charSpecColorHex.Size = new Size(100, 23);
+            charSpecColorHex.TabIndex = 5;
+            charSpecColorHex.Text = "#000000";
+            charSpecColorHex.TextAlign = HorizontalAlignment.Center;
+            charSpecColorHex.TextChanged += charSpecColorHex_TextChanged;
+            // 
             // charSpecSwatch
             // 
             charSpecSwatch.BackColor = Color.Black;
             charSpecSwatch.BorderStyle = BorderStyle.FixedSingle;
-            charSpecSwatch.Location = new Point(31, 41);
+            charSpecSwatch.Location = new Point(31, 30);
             charSpecSwatch.Margin = new Padding(25);
             charSpecSwatch.MaximumSize = new Size(100, 100);
             charSpecSwatch.MinimumSize = new Size(100, 100);
@@ -2768,6 +2859,7 @@
             // charDiffGroupBox
             // 
             charDiffGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            charDiffGroupBox.Controls.Add(charDiffColorHex);
             charDiffGroupBox.Controls.Add(charDiffSwatch);
             charDiffGroupBox.Controls.Add(charDiffColorTable);
             charDiffGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -2779,11 +2871,23 @@
             charDiffGroupBox.TabStop = false;
             charDiffGroupBox.Text = "Character Diffuse Color (Also affects rim lighting)";
             // 
+            // charDiffColorHex
+            // 
+            charDiffColorHex.BorderStyle = BorderStyle.FixedSingle;
+            charDiffColorHex.Location = new Point(31, 130);
+            charDiffColorHex.MaxLength = 7;
+            charDiffColorHex.Name = "charDiffColorHex";
+            charDiffColorHex.Size = new Size(100, 23);
+            charDiffColorHex.TabIndex = 4;
+            charDiffColorHex.Text = "#000000";
+            charDiffColorHex.TextAlign = HorizontalAlignment.Center;
+            charDiffColorHex.TextChanged += charDiffColorHex_TextChanged;
+            // 
             // charDiffSwatch
             // 
             charDiffSwatch.BackColor = Color.Black;
             charDiffSwatch.BorderStyle = BorderStyle.FixedSingle;
-            charDiffSwatch.Location = new Point(31, 41);
+            charDiffSwatch.Location = new Point(31, 30);
             charDiffSwatch.Margin = new Padding(25);
             charDiffSwatch.MaximumSize = new Size(100, 100);
             charDiffSwatch.MinimumSize = new Size(100, 100);
@@ -2972,6 +3076,7 @@
             // charAmbGroupBox
             // 
             charAmbGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            charAmbGroupBox.Controls.Add(charAmbColorHex);
             charAmbGroupBox.Controls.Add(charAmbSwatch);
             charAmbGroupBox.Controls.Add(charAmbColorTable);
             charAmbGroupBox.Dock = DockStyle.Top;
@@ -2985,11 +3090,23 @@
             charAmbGroupBox.TabStop = false;
             charAmbGroupBox.Text = "Character Ambient Color";
             // 
+            // charAmbColorHex
+            // 
+            charAmbColorHex.BorderStyle = BorderStyle.FixedSingle;
+            charAmbColorHex.Location = new Point(31, 130);
+            charAmbColorHex.MaxLength = 7;
+            charAmbColorHex.Name = "charAmbColorHex";
+            charAmbColorHex.Size = new Size(100, 23);
+            charAmbColorHex.TabIndex = 3;
+            charAmbColorHex.Text = "#000000";
+            charAmbColorHex.TextAlign = HorizontalAlignment.Center;
+            charAmbColorHex.TextChanged += charAmbColorHex_TextChanged;
+            // 
             // charAmbSwatch
             // 
             charAmbSwatch.BackColor = Color.Black;
             charAmbSwatch.BorderStyle = BorderStyle.FixedSingle;
-            charAmbSwatch.Location = new Point(31, 41);
+            charAmbSwatch.Location = new Point(31, 30);
             charAmbSwatch.Margin = new Padding(25);
             charAmbSwatch.MaximumSize = new Size(100, 100);
             charAmbSwatch.MinimumSize = new Size(100, 100);
@@ -3193,6 +3310,7 @@
             // floorFogColorGroupBox
             // 
             floorFogColorGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            floorFogColorGroupBox.Controls.Add(floorFogColorHex);
             floorFogColorGroupBox.Controls.Add(floorFogColorSwatch);
             floorFogColorGroupBox.Controls.Add(floorFogColorTable);
             floorFogColorGroupBox.FlatStyle = FlatStyle.Flat;
@@ -3205,11 +3323,23 @@
             floorFogColorGroupBox.TabStop = false;
             floorFogColorGroupBox.Text = "Floor Fog Color";
             // 
+            // floorFogColorHex
+            // 
+            floorFogColorHex.BorderStyle = BorderStyle.FixedSingle;
+            floorFogColorHex.Location = new Point(31, 130);
+            floorFogColorHex.MaxLength = 7;
+            floorFogColorHex.Name = "floorFogColorHex";
+            floorFogColorHex.Size = new Size(100, 23);
+            floorFogColorHex.TabIndex = 5;
+            floorFogColorHex.Text = "#000000";
+            floorFogColorHex.TextAlign = HorizontalAlignment.Center;
+            floorFogColorHex.TextChanged += floorFogColorHex_TextChanged;
+            // 
             // floorFogColorSwatch
             // 
             floorFogColorSwatch.BackColor = Color.Black;
             floorFogColorSwatch.BorderStyle = BorderStyle.FixedSingle;
-            floorFogColorSwatch.Location = new Point(31, 41);
+            floorFogColorSwatch.Location = new Point(31, 30);
             floorFogColorSwatch.Margin = new Padding(25);
             floorFogColorSwatch.MaximumSize = new Size(100, 100);
             floorFogColorSwatch.MinimumSize = new Size(100, 100);
@@ -3683,6 +3813,7 @@
             // fogColorGroupBox
             // 
             fogColorGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            fogColorGroupBox.Controls.Add(fogColorHex);
             fogColorGroupBox.Controls.Add(fogColorSwatch);
             fogColorGroupBox.Controls.Add(fogColorTable);
             fogColorGroupBox.FlatStyle = FlatStyle.Flat;
@@ -3695,11 +3826,23 @@
             fogColorGroupBox.TabStop = false;
             fogColorGroupBox.Text = "Fog Color";
             // 
+            // fogColorHex
+            // 
+            fogColorHex.BorderStyle = BorderStyle.FixedSingle;
+            fogColorHex.Location = new Point(31, 130);
+            fogColorHex.MaxLength = 7;
+            fogColorHex.Name = "fogColorHex";
+            fogColorHex.Size = new Size(100, 23);
+            fogColorHex.TabIndex = 4;
+            fogColorHex.Text = "#000000";
+            fogColorHex.TextAlign = HorizontalAlignment.Center;
+            fogColorHex.TextChanged += fogColorHex_TextChanged;
+            // 
             // fogColorSwatch
             // 
             fogColorSwatch.BackColor = Color.Black;
             fogColorSwatch.BorderStyle = BorderStyle.FixedSingle;
-            fogColorSwatch.Location = new Point(31, 41);
+            fogColorSwatch.Location = new Point(31, 30);
             fogColorSwatch.Margin = new Padding(25);
             fogColorSwatch.MaximumSize = new Size(100, 100);
             fogColorSwatch.MinimumSize = new Size(100, 100);
@@ -5518,6 +5661,7 @@
             // shadowColorGroupBox
             // 
             shadowColorGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            shadowColorGroupBox.Controls.Add(shadowColorHex);
             shadowColorGroupBox.Controls.Add(shadowColorSwatch);
             shadowColorGroupBox.Controls.Add(shadowColorTable);
             shadowColorGroupBox.FlatStyle = FlatStyle.Flat;
@@ -5530,11 +5674,23 @@
             shadowColorGroupBox.TabStop = false;
             shadowColorGroupBox.Text = "Shadow Color (Royal Only)";
             // 
+            // shadowColorHex
+            // 
+            shadowColorHex.BorderStyle = BorderStyle.FixedSingle;
+            shadowColorHex.Location = new Point(31, 130);
+            shadowColorHex.MaxLength = 7;
+            shadowColorHex.Name = "shadowColorHex";
+            shadowColorHex.Size = new Size(100, 23);
+            shadowColorHex.TabIndex = 5;
+            shadowColorHex.Text = "#000000";
+            shadowColorHex.TextAlign = HorizontalAlignment.Center;
+            shadowColorHex.TextChanged += shadowColorHex_TextChanged;
+            // 
             // shadowColorSwatch
             // 
             shadowColorSwatch.BackColor = Color.Black;
             shadowColorSwatch.BorderStyle = BorderStyle.FixedSingle;
-            shadowColorSwatch.Location = new Point(31, 41);
+            shadowColorSwatch.Location = new Point(31, 30);
             shadowColorSwatch.Margin = new Padding(25);
             shadowColorSwatch.MaximumSize = new Size(100, 100);
             shadowColorSwatch.MinimumSize = new Size(100, 100);
@@ -6742,6 +6898,7 @@
             // skyColorGroupBox
             // 
             skyColorGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            skyColorGroupBox.Controls.Add(skyColorHex);
             skyColorGroupBox.Controls.Add(skyColorSwatch);
             skyColorGroupBox.Controls.Add(skyColorTable);
             skyColorGroupBox.FlatStyle = FlatStyle.Flat;
@@ -6754,11 +6911,23 @@
             skyColorGroupBox.TabStop = false;
             skyColorGroupBox.Text = "Sky (Clear) Color";
             // 
+            // skyColorHex
+            // 
+            skyColorHex.BorderStyle = BorderStyle.FixedSingle;
+            skyColorHex.Location = new Point(31, 130);
+            skyColorHex.MaxLength = 7;
+            skyColorHex.Name = "skyColorHex";
+            skyColorHex.Size = new Size(100, 23);
+            skyColorHex.TabIndex = 6;
+            skyColorHex.Text = "#000000";
+            skyColorHex.TextAlign = HorizontalAlignment.Center;
+            skyColorHex.TextChanged += skyColorHex_TextChanged;
+            // 
             // skyColorSwatch
             // 
             skyColorSwatch.BackColor = Color.Black;
             skyColorSwatch.BorderStyle = BorderStyle.FixedSingle;
-            skyColorSwatch.Location = new Point(31, 41);
+            skyColorSwatch.Location = new Point(31, 30);
             skyColorSwatch.Margin = new Padding(25);
             skyColorSwatch.MaximumSize = new Size(100, 100);
             skyColorSwatch.MinimumSize = new Size(100, 100);
@@ -7364,6 +7533,7 @@
             // lightMapColorGroupBox
             // 
             lightMapColorGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            lightMapColorGroupBox.Controls.Add(lightMapColorHex);
             lightMapColorGroupBox.Controls.Add(lightMapColorSwatch);
             lightMapColorGroupBox.Controls.Add(lightMapColorTable);
             lightMapColorGroupBox.FlatStyle = FlatStyle.Flat;
@@ -7376,11 +7546,23 @@
             lightMapColorGroupBox.TabStop = false;
             lightMapColorGroupBox.Text = "Light Map Color";
             // 
+            // lightMapColorHex
+            // 
+            lightMapColorHex.BorderStyle = BorderStyle.FixedSingle;
+            lightMapColorHex.Location = new Point(31, 130);
+            lightMapColorHex.MaxLength = 7;
+            lightMapColorHex.Name = "lightMapColorHex";
+            lightMapColorHex.Size = new Size(100, 23);
+            lightMapColorHex.TabIndex = 7;
+            lightMapColorHex.Text = "#000000";
+            lightMapColorHex.TextAlign = HorizontalAlignment.Center;
+            lightMapColorHex.TextChanged += lightMapColorHex_TextChanged;
+            // 
             // lightMapColorSwatch
             // 
             lightMapColorSwatch.BackColor = Color.Black;
             lightMapColorSwatch.BorderStyle = BorderStyle.FixedSingle;
-            lightMapColorSwatch.Location = new Point(31, 41);
+            lightMapColorSwatch.Location = new Point(31, 30);
             lightMapColorSwatch.Margin = new Padding(25);
             lightMapColorSwatch.MaximumSize = new Size(100, 100);
             lightMapColorSwatch.MinimumSize = new Size(100, 100);
@@ -7645,6 +7827,7 @@
             ((System.ComponentModel.ISupportInitialize)fldLightDirValueZ).EndInit();
             ((System.ComponentModel.ISupportInitialize)fldLightDirValueY).EndInit();
             fldEmissiveGroupBox.ResumeLayout(false);
+            fldEmissiveGroupBox.PerformLayout();
             fldEmissiveColorTable.ResumeLayout(false);
             fldEmissiveColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)fldEmissiveValueB).EndInit();
@@ -7656,6 +7839,7 @@
             ((System.ComponentModel.ISupportInitialize)fldEmissiveValueR).EndInit();
             ((System.ComponentModel.ISupportInitialize)fldEmissiveSliderB).EndInit();
             fldSpecGroupBox.ResumeLayout(false);
+            fldSpecGroupBox.PerformLayout();
             fldSpecColorTable.ResumeLayout(false);
             fldSpecColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)fldSpecValueB).EndInit();
@@ -7667,6 +7851,7 @@
             ((System.ComponentModel.ISupportInitialize)fldSpecSliderB).EndInit();
             ((System.ComponentModel.ISupportInitialize)fldSpecSliderA).EndInit();
             fldDiffGroupBox.ResumeLayout(false);
+            fldDiffGroupBox.PerformLayout();
             fldDiffColorTable.ResumeLayout(false);
             fldDiffColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)fldDiffValueB).EndInit();
@@ -7678,6 +7863,7 @@
             ((System.ComponentModel.ISupportInitialize)fldDiffSliderB).EndInit();
             ((System.ComponentModel.ISupportInitialize)fldDiffSliderA).EndInit();
             fldAmbGroupBox.ResumeLayout(false);
+            fldAmbGroupBox.PerformLayout();
             fldAmbColorTable.ResumeLayout(false);
             fldAmbColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)fldAmbValueB).EndInit();
@@ -7712,6 +7898,7 @@
             ((System.ComponentModel.ISupportInitialize)charLightDirValueZ).EndInit();
             ((System.ComponentModel.ISupportInitialize)charLightDirValueY).EndInit();
             charEmissiveGroupBox.ResumeLayout(false);
+            charEmissiveGroupBox.PerformLayout();
             charEmissiveColorTable.ResumeLayout(false);
             charEmissiveColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)charEmissiveValueB).EndInit();
@@ -7723,6 +7910,7 @@
             ((System.ComponentModel.ISupportInitialize)charEmissiveValueR).EndInit();
             ((System.ComponentModel.ISupportInitialize)charEmissiveSliderB).EndInit();
             charSpecGroupBox.ResumeLayout(false);
+            charSpecGroupBox.PerformLayout();
             charSpecColorTable.ResumeLayout(false);
             charSpecColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)charSpecValueB).EndInit();
@@ -7734,6 +7922,7 @@
             ((System.ComponentModel.ISupportInitialize)charSpecSliderB).EndInit();
             ((System.ComponentModel.ISupportInitialize)charSpecSliderA).EndInit();
             charDiffGroupBox.ResumeLayout(false);
+            charDiffGroupBox.PerformLayout();
             charDiffColorTable.ResumeLayout(false);
             charDiffColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)charDiffValueB).EndInit();
@@ -7745,6 +7934,7 @@
             ((System.ComponentModel.ISupportInitialize)charDiffSliderB).EndInit();
             ((System.ComponentModel.ISupportInitialize)charDiffSliderA).EndInit();
             charAmbGroupBox.ResumeLayout(false);
+            charAmbGroupBox.PerformLayout();
             charAmbColorTable.ResumeLayout(false);
             charAmbColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)charAmbValueB).EndInit();
@@ -7757,6 +7947,7 @@
             ((System.ComponentModel.ISupportInitialize)charAmbSliderA).EndInit();
             fogPage.ResumeLayout(false);
             floorFogColorGroupBox.ResumeLayout(false);
+            floorFogColorGroupBox.PerformLayout();
             floorFogColorTable.ResumeLayout(false);
             floorFogColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)floorFogColorValueB).EndInit();
@@ -7778,6 +7969,7 @@
             ((System.ComponentModel.ISupportInitialize)fogEndDistanceValue).EndInit();
             ((System.ComponentModel.ISupportInitialize)fogStartDistanceValue).EndInit();
             fogColorGroupBox.ResumeLayout(false);
+            fogColorGroupBox.PerformLayout();
             fogColorTable.ResumeLayout(false);
             fogColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)fogColorValueB).EndInit();
@@ -7858,6 +8050,7 @@
             lightingSettingsTable.PerformLayout();
             fieldShadowTab.ResumeLayout(false);
             shadowColorGroupBox.ResumeLayout(false);
+            shadowColorGroupBox.PerformLayout();
             shadowColorTable.ResumeLayout(false);
             shadowColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)shadowColorValueB).EndInit();
@@ -7911,6 +8104,7 @@
             ((System.ComponentModel.ISupportInitialize)windDirectionValueZ).EndInit();
             ((System.ComponentModel.ISupportInitialize)windStrengthValue).EndInit();
             skyColorGroupBox.ResumeLayout(false);
+            skyColorGroupBox.PerformLayout();
             skyColorTable.ResumeLayout(false);
             skyColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)skyColorValueB).EndInit();
@@ -7941,6 +8135,7 @@
             ((System.ComponentModel.ISupportInitialize)characterOutlineStartValue).EndInit();
             ((System.ComponentModel.ISupportInitialize)characterOutlineEndValue).EndInit();
             lightMapColorGroupBox.ResumeLayout(false);
+            lightMapColorGroupBox.PerformLayout();
             lightMapColorTable.ResumeLayout(false);
             lightMapColorTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)lightMapColorValueB).EndInit();
@@ -8473,5 +8668,18 @@
         private NumericUpDown lightingUnkValueField23C;
         private NumericUpDown miscUnkValueField251;
         private Label miscUnkLabelField251;
+        private TextBox fldAmbColorHex;
+        private TextBox fldEmissiveColorHex;
+        private TextBox fldSpecColorHex;
+        private TextBox fldDiffColorHex;
+        private TextBox charSpecColorHex;
+        private TextBox charDiffColorHex;
+        private TextBox charAmbColorHex;
+        private TextBox charEmissiveColorHex;
+        private TextBox floorFogColorHex;
+        private TextBox fogColorHex;
+        private TextBox shadowColorHex;
+        private TextBox skyColorHex;
+        private TextBox lightMapColorHex;
     }
 }

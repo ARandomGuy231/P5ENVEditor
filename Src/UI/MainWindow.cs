@@ -221,6 +221,28 @@ namespace P5ENVEditor
             }
         }
 
+        private void UpdateColorFromHex(TextBox hexText, NumericUpDown red, NumericUpDown green, NumericUpDown blue)
+        {
+            if (hexText.Text.Length == 7 && hexText.Text.StartsWith('#'))
+            {
+                Color hexColor;
+
+                try
+                {
+                    hexColor = ColorTranslator.FromHtml(hexText.Text);
+                }
+                catch (Exception ex)
+                {
+                    Logger.WriteToLog($"An error occured while grabbing color from {hexText.Name}: {ex.Message}", LogLevel.Debug);
+                    return;
+                }
+
+                red.Value = hexColor.R;
+                green.Value = hexColor.G;
+                blue.Value = hexColor.B;
+            }
+        }
+
         private void MarkFileUnsaved(object? sender, EventArgs e)
         {
             hasUnsavedChanges = true;

@@ -68,6 +68,11 @@ namespace P5ENVEditor
             shadowColorSwatch.BackColor = Color.FromArgb((int)shadowColorValueR.Value, (int)shadowColorValueG.Value, (int)shadowColorValueB.Value);
         }
 
+        private void UpdateShadowHex()
+        {
+            shadowColorHex.Text = $"#{shadowColorSwatch.BackColor.R:X2}{shadowColorSwatch.BackColor.G:X2}{shadowColorSwatch.BackColor.B:X2}";
+        }
+
         private void shadowColorSliderR_Scroll(object sender, EventArgs e)
         {
             shadowColorValueR.Value = shadowColorSliderR.Value;
@@ -77,6 +82,7 @@ namespace P5ENVEditor
         {
             shadowColorSliderR.Value = (int)shadowColorValueR.Value;
             UpdateShadowColorSwatch();
+            UpdateShadowHex();
         }
 
         private void shadowColorSliderG_Scroll(object sender, EventArgs e)
@@ -88,6 +94,7 @@ namespace P5ENVEditor
         {
             shadowColorSliderG.Value = (int)shadowColorValueG.Value;
             UpdateShadowColorSwatch();
+            UpdateShadowHex();
         }
 
         private void shadowColorSliderB_Scroll(object sender, EventArgs e)
@@ -99,6 +106,7 @@ namespace P5ENVEditor
         {
             shadowColorSliderB.Value = (int)shadowColorValueB.Value;
             UpdateShadowColorSwatch();
+            UpdateShadowHex();
         }
 
         private void shadowColorSliderA_Scroll(object sender, EventArgs e)
@@ -109,6 +117,11 @@ namespace P5ENVEditor
         private void shadowColorValueA_ValueChanged(object sender, EventArgs e)
         {
             shadowColorSliderA.Value = (int)shadowColorValueA.Value;
+        }
+
+        private void shadowColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(shadowColorHex, shadowColorValueR, shadowColorValueG, shadowColorValueB);
         }
     }
 }

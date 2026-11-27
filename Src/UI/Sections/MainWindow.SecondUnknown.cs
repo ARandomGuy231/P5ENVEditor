@@ -99,6 +99,11 @@ namespace P5ENVEditor
             lightMapColorSwatch.BackColor = Color.FromArgb((int)lightMapColorValueR.Value, (int)lightMapColorValueG.Value, (int)lightMapColorValueB.Value);
         }
 
+        private void UpdateLightMapHex()
+        {
+            lightMapColorHex.Text = $"#{lightMapColorSwatch.BackColor.R:X2}{lightMapColorSwatch.BackColor.G:X2}{lightMapColorSwatch.BackColor.B:X2}";
+        }
+
         private void lightMapColorSliderR_Scroll(object sender, EventArgs e)
         {
             lightMapColorValueR.Value = lightMapColorSliderR.Value;
@@ -108,6 +113,7 @@ namespace P5ENVEditor
         {
             lightMapColorSliderR.Value = (int)lightMapColorValueR.Value;
             UpdateLightMapSwatch();
+            UpdateLightMapHex();
         }
 
         private void lightMapColorSliderG_Scroll(object sender, EventArgs e)
@@ -119,6 +125,7 @@ namespace P5ENVEditor
         {
             lightMapColorSliderG.Value = (int)lightMapColorValueG.Value;
             UpdateLightMapSwatch();
+            UpdateLightMapHex();
         }
 
         private void lightMapColorSliderB_Scroll(object sender, EventArgs e)
@@ -130,6 +137,7 @@ namespace P5ENVEditor
         {
             lightMapColorSliderB.Value = (int)lightMapColorValueB.Value;
             UpdateLightMapSwatch();
+            UpdateLightMapHex();
         }
 
         private void lightMapColorSliderA_Scroll(object sender, EventArgs e)
@@ -140,6 +148,11 @@ namespace P5ENVEditor
         private void lightMapColorValueA_ValueChanged(object sender, EventArgs e)
         {
             lightMapColorSliderA.Value = (int)lightMapColorValueA.Value;
+        }
+
+        private void lightMapColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(lightMapColorHex, lightMapColorValueR, lightMapColorValueG, lightMapColorValueB);
         }
     }
 }

@@ -102,10 +102,31 @@ namespace P5ENVEditor
             fldAmbValueR.Value = fldAmbSliderR.Value;
         }
 
+        private void UpdateFldAmbHex()
+        {
+            fldAmbColorHex.Text = $"#{fldAmbSwatch.BackColor.R:X2}{fldAmbSwatch.BackColor.G:X2}{fldAmbSwatch.BackColor.B:X2}";
+        }
+
+        private void UpdateFldDiffHex()
+        {
+            fldDiffColorHex.Text = $"#{fldDiffSwatch.BackColor.R:X2}{fldDiffSwatch.BackColor.G:X2}{fldDiffSwatch.BackColor.B:X2}";
+        }
+
+        private void UpdateFldSpecHex()
+        {
+            fldSpecColorHex.Text = $"#{fldSpecSwatch.BackColor.R:X2}{fldSpecSwatch.BackColor.G:X2}{fldSpecSwatch.BackColor.B:X2}";
+        }
+
+        private void UpdateFldEmissiveHex()
+        {
+            fldEmissiveColorHex.Text = $"#{fldEmissiveSwatch.BackColor.R:X2}{fldEmissiveSwatch.BackColor.G:X2}{fldEmissiveSwatch.BackColor.B:X2}";
+        }
+
         private void fldAmbValueR_ValueChanged(object sender, EventArgs e)
         {
             fldAmbSliderR.Value = (int)fldAmbValueR.Value;
             UpdateFldAmbSwatch();
+            UpdateFldAmbHex();
         }
 
         private void fldAmbSliderG_Scroll(object sender, EventArgs e)
@@ -117,6 +138,7 @@ namespace P5ENVEditor
         {
             fldAmbSliderG.Value = (int)fldAmbValueG.Value;
             UpdateFldAmbSwatch();
+            UpdateFldAmbHex();
         }
 
         private void fldAmbSliderB_Scroll(object sender, EventArgs e)
@@ -128,6 +150,7 @@ namespace P5ENVEditor
         {
             fldAmbSliderB.Value = (int)fldAmbValueB.Value;
             UpdateFldAmbSwatch();
+            UpdateFldAmbHex();
         }
 
         private void fldAmbSliderA_Scroll(object sender, EventArgs e)
@@ -149,6 +172,7 @@ namespace P5ENVEditor
         {
             fldDiffSliderR.Value = (int)fldDiffValueR.Value;
             UpdateFldDiffSwatch();
+            UpdateFldDiffHex();
         }
 
         private void fldDiffSliderG_Scroll(object sender, EventArgs e)
@@ -160,6 +184,7 @@ namespace P5ENVEditor
         {
             fldDiffSliderG.Value = (int)fldDiffValueG.Value;
             UpdateFldDiffSwatch();
+            UpdateFldDiffHex();
         }
 
         private void fldDiffSliderB_Scroll(object sender, EventArgs e)
@@ -171,6 +196,7 @@ namespace P5ENVEditor
         {
             fldDiffSliderB.Value = (int)fldDiffValueB.Value;
             UpdateFldDiffSwatch();
+            UpdateFldDiffHex();
         }
 
         private void fldDiffSliderA_Scroll(object sender, EventArgs e)
@@ -192,6 +218,7 @@ namespace P5ENVEditor
         {
             fldSpecSliderR.Value = (int)fldSpecValueR.Value;
             UpdateFldSpecSwatch();
+            UpdateFldSpecHex();
         }
 
         private void fldSpecSliderG_Scroll(object sender, EventArgs e)
@@ -203,6 +230,7 @@ namespace P5ENVEditor
         {
             fldSpecSliderG.Value = (int)fldSpecValueG.Value;
             UpdateFldSpecSwatch();
+            UpdateFldSpecHex();
         }
 
         private void fldSpecSliderB_Scroll(object sender, EventArgs e)
@@ -214,6 +242,7 @@ namespace P5ENVEditor
         {
             fldSpecSliderB.Value = (int)fldSpecValueB.Value;
             UpdateFldSpecSwatch();
+            UpdateFldSpecHex();
         }
 
         private void fldSpecSliderA_Scroll(object sender, EventArgs e)
@@ -235,6 +264,7 @@ namespace P5ENVEditor
         {
             fldEmissiveSliderR.Value = (int)fldEmissiveValueR.Value;
             UpdateFldEmissiveSwatch();
+            UpdateFldEmissiveHex();
         }
 
         private void fldEmissiveSliderG_Scroll(object sender, EventArgs e)
@@ -246,6 +276,7 @@ namespace P5ENVEditor
         {
             fldEmissiveSliderG.Value = (int)fldEmissiveValueG.Value;
             UpdateFldEmissiveSwatch();
+            UpdateFldEmissiveHex();
         }
 
         private void fldEmissiveSliderB_Scroll(object sender, EventArgs e)
@@ -257,6 +288,7 @@ namespace P5ENVEditor
         {
             fldEmissiveSliderB.Value = (int)fldEmissiveValueB.Value;
             UpdateFldEmissiveSwatch();
+            UpdateFldEmissiveHex();
         }
 
         private void fldEmissiveSliderA_Scroll(object sender, EventArgs e)
@@ -267,6 +299,26 @@ namespace P5ENVEditor
         private void fldEmissiveValueA_ValueChanged(object sender, EventArgs e)
         {
             fldEmissiveSliderA.Value = (int)fldEmissiveValueA.Value;
+        }
+
+        private void fieldAmbColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(fldAmbColorHex, fldAmbValueR, fldAmbValueG, fldAmbValueB);
+        }
+
+        private void fldDiffColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(fldDiffColorHex, fldDiffValueR, fldDiffValueG, fldDiffValueB);
+        }
+
+        private void fldSpecColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(fldSpecColorHex, fldSpecValueR, fldSpecValueG, fldSpecValueB);
+        }
+
+        private void fldEmissiveColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(fldEmissiveColorHex, fldEmissiveValueR, fldEmissiveValueG, fldEmissiveValueB);
         }
     }
 }

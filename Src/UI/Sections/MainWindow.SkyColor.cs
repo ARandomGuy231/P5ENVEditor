@@ -30,6 +30,11 @@ namespace P5ENVEditor
             skyColorSwatch.BackColor = Color.FromArgb((int)skyColorValueR.Value, (int)skyColorValueG.Value, (int)skyColorValueB.Value);
         }
 
+        private void UpdateSkyColorHex()
+        {
+            skyColorHex.Text = $"#{skyColorSwatch.BackColor.R:X2}{skyColorSwatch.BackColor.G:X2}{skyColorSwatch.BackColor.B:X2}";
+        }
+
         private void skyColorSliderR_Scroll(object sender, EventArgs e)
         {
             skyColorValueR.Value = skyColorSliderR.Value;
@@ -39,6 +44,7 @@ namespace P5ENVEditor
         {
             skyColorSliderR.Value = (int)skyColorValueR.Value;
             UpdateSkyColorSwatch();
+            UpdateSkyColorHex();
         }
 
         private void skyColorSliderG_Scroll(object sender, EventArgs e)
@@ -50,6 +56,7 @@ namespace P5ENVEditor
         {
             skyColorSliderG.Value = (int)skyColorValueG.Value;
             UpdateSkyColorSwatch();
+            UpdateSkyColorHex();
         }
 
         private void skyColorSliderB_Scroll(object sender, EventArgs e)
@@ -61,6 +68,7 @@ namespace P5ENVEditor
         {
             skyColorSliderB.Value = (int)skyColorValueB.Value;
             UpdateSkyColorSwatch();
+            UpdateSkyColorHex();
         }
 
         private void skyColorSliderA_Scroll(object sender, EventArgs e)
@@ -71,6 +79,11 @@ namespace P5ENVEditor
         private void skyColorValueA_ValueChanged(object sender, EventArgs e)
         {
             skyColorSliderA.Value = (int)skyColorValueA.Value;
+        }
+
+        private void skyColorHex_TextChanged(object sender, EventArgs e)
+        {
+            UpdateColorFromHex(skyColorHex, skyColorValueR, skyColorValueG, skyColorValueB);
         }
     }
 }
